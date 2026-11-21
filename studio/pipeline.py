@@ -30,16 +30,25 @@ def image_args(model: str, prompt: str, refs: list[str]) -> dict:
     raise ValueError(model)
 
 
+def clip_seconds(model: str, duration: int) -> int:
+    """Seconds actually billed/generated for a shot (Veo only offers 4/6/8s)."""
+    if model.startswith("veo"):
+        return 4 if duration <= 4 else 6 if duration <= 6 else 8
+    return max(duration, 4 if model.startswith("seedance") else 3)
+
+
 def video_args(model: str, prompt: str, negative: str, image: str, duration: int) -> dict:
     uri = file_uri(image)
-    if model == "kling":
-        return {"prompt": prompt, "image_url": uri, "duration": str(10 if duration > 5 else 5),
-                "negative_prompt": negative, "cfg_scale": 0.5}
-    if model == "veo_fast":
-        return {"prompt": prompt, "image_url": uri, "duration": "8s",
-                "generate_audio": True, "resolution": "720p"}
-    if model == "seedance":
-        return {"prompt": prompt, "image_url": uri, "duration": str(duration), "resolution": "720p"}
+    secs = clip_seconds(model, duration)
+    if model.startswith("kling_v4"):
+        a = {"prompt": prompt, "start_image_url": uri, "duration": secs, "resolution": "720p"}
+        return a
+    if model.startswith("veo31"):
+        return {"prompt": prompt, "image_url": uri, "duration": f"{secs}s", "negative_prompt": negative,
+                "generate_audio": True, "resolution": "720p", "aspect_ratio": "9:16"}
+    if model.startswith("seedance25"):
+        return {"prompt": prompt, "image_url": uri, "duration": str(secs), "resolution": "720p",
+                "aspect_ratio": "9:16", "generate_audio": True}
     raise ValueError(model)
 
 
@@ -123,7 +132,7 @@ def animate(ep_name: str, keyframe_dir: str, video_model: str | None = None,
         img = kdir / f"{shot['id']}_v{chosen}.png"
         args = video_args(video_model, prompts.video_prompt(shot, ep, style_id),
                           prompts.negative_prompt(ep, style_id), str(img), shot["duration"])
-        secs = 8 if video_model == "veo_fast" else shot["duration"]
+        secs = clip_seconds(video_model, shot["duration"])
         r = run(m["endpoint"], args, est_cost=m["est_cost_per_sec"] * secs, log=log,
                 label=f"clip {shot['id']} ({video_model})")
         url = first_url(r, "video")
@@ -223,8 +232,9 @@ def estimate(ep_name: str) -> dict:
     vm_name = ep.get("video_model") or cfg["defaults"]["video_model"]
     vm = cfg["video_models"][vm_name]
     n = len(ep["shots"])
-    secs = sum(8 if vm_name == "veo_fast" else s["duration"] for s in ep["shots"])
+    secs = sum(clip_seconds(vm_name, s["duration"]) for s in ep["shots"])
+    sfx = 0 if vm.get("native_audio") else n * cfg["audio_models"]["sfx"]["est_cost"]
     est = {"keyframes": n * im["est_cost"] * 2, "video": secs * vm["est_cost_per_sec"],
-           "audio": n * cfg["audio_models"]["sfx"]["est_cost"] + cfg["audio_models"]["music"]["est_cost"]}
+           "audio": sfx + cfg["audio_models"]["music"]["est_cost"]}
     est["total_first_pass"] = round(sum(est.values()), 2)
     return est
