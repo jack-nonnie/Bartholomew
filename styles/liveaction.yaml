@@ -1,0 +1,8 @@
+id: liveaction
+label: Live-action plush
+prompt: >-
+  Photorealistic live-action footage shot on a cinema camera in a real,
+  full-size luxury day spa; the real plush toy is alive and moves on its own,
+  natural window light, realistic scale (the bear is small next to real towels
+  and furniture), shallow depth of field, cozy lifestyle-commercial look.
+negative: CGI look, cartoon, anime, humans' faces, text, watermark, logo

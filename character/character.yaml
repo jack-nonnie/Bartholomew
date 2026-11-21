@@ -1,0 +1,31 @@
+# Character bible — the single source of truth for what the bear looks like.
+# Every image/video prompt starts with `identity`. Edit carefully: changes here change every episode.
+name: Bartholomew          # placeholder — rename to her bear's real name
+species: teddy bear plush
+identity: >-
+  a chubby, round-bodied teddy bear plush with dense, curly, shaggy fur in a warm
+  caramel-tan / light-chestnut color, slightly darker toffee tones in the curls;
+  a big round head with two small round fuzzy ears set high on top; tiny glossy
+  black bead eyes set wide apart; a small rounded upside-down-triangle nose in
+  smooth darker brown suede; no stitched mouth at rest (a small soft mouth appears only when the bear smiles, laughs or gasps); a short soft muzzle;
+  short stubby arms that hang down at the sides; a pear-shaped seated body with
+  a soft round belly; short stubby legs with round, flat, padless feet in the same
+  curly fur; a tiny round fuzzy tail on the back. Proportions: head about 40% of
+  total height. Looks hand-made, huggable, slightly slouchy.
+must_keep:            # appended as a reminder in every prompt
+  - same curly caramel-tan fur
+  - tiny black bead eyes and brown suede triangle nose
+  - small round ears on top of head
+  - chubby round body, stubby limbs
+avoid:                # fed into negative prompts where supported
+  - realistic bear, real animal, claws, teeth, sharp features
+  - smooth short fur, white fur, dark brown fur
+  - big cartoon eyes, eyebrows, human hands, fingers
+  - bow tie, ribbon, clothing unless the shot asks for it
+# Reference images. Put real photos in character/photos/. The generated
+# character sheet (after you approve it) goes in character/sheet/ and replaces these.
+reference_images:
+  - character/photos/front.jpg
+  - character/photos/side.jpg
+  - character/photos/back.jpg
+  - character/photos/front_2.jpg
