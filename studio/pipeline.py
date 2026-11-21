@@ -22,6 +22,11 @@ def image_args(model: str, prompt: str, refs: list[str]) -> dict:
     if model == "nano_banana":
         return {"prompt": prompt, "image_urls": uris, "num_images": 1,
                 "aspect_ratio": "9:16", "output_format": "png"}
+    if model == "nano_banana_21":
+        return {"prompt": prompt, "image_urls": uris, "num_images": 1, "aspect_ratio": "9:16",
+                "resolution": "1K", "output_format": "png"}
+    if model == "seedream55":
+        return {"prompt": prompt, "image_urls": uris, "num_images": 1, "image_size": "portrait_16_9"}
     if model == "seedream":
         return {"prompt": prompt, "image_urls": uris, "num_images": 1,
                 "image_size": {"width": 1152, "height": 2048}}

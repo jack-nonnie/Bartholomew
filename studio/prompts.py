@@ -11,18 +11,18 @@ def _fill(text: str, char: dict) -> str:
 
 
 def keyframe_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
+    """Style first (so the model commits to the look), then character, then the shot."""
     char = config.character()
     sty = config.style(style_id or ep["style"])
     per = config.personality(ep["personality"])
     return (
-        f"Use the reference images as the exact character design. "
-        f"The character, {char['name']}, is {char['identity']} "
-        f"Scene: {_fill(shot['keyframe'], char)}. "
-        f"Setting: {' '.join(ep['setting'].split())}. "
-        f"Personality: {per['label'].lower()}, expressive face. "
-        f"Style: {sty['prompt']} "
-        f"Vertical 9:16 composition, the bear clearly visible and in focus. "
-        f"Keep exactly: {'; '.join(char['must_keep'])}."
+        f"VISUAL STYLE (most important, apply to the whole image): {sty['prompt']} "
+        f"CHARACTER: the reference photos show {char['name']}, a real plush teddy bear; keep his exact "
+        f"design: {'; '.join(char['must_keep'])}. Full description: {char['identity']} "
+        f"SCENE: {_fill(shot['keyframe'], char)}. "
+        f"SETTING: {' '.join(ep['setting'].split())}, rendered in the visual style above. "
+        f"Personality: {per['label'].lower()}, expressive animated face. "
+        f"Vertical 9:16 frame, the bear clearly visible and in focus. Do not copy the white photo backgrounds."
     )
 
 

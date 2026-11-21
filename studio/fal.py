@@ -46,8 +46,7 @@ def run(endpoint: str, args: dict, *, est_cost: float, log: Path, label: str) ->
 
 def download(url: str, dest: Path) -> Path:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    if not dest.exists():
-        urllib.request.urlretrieve(url, dest)
+    urllib.request.urlretrieve(url, dest)  # always refresh: the prompt (and result) may have changed
     return dest
 
 

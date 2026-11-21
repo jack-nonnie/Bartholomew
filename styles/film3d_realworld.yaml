@@ -1,0 +1,10 @@
+id: film3d_realworld
+label: Animated bear, photoreal world
+prompt: >-
+  Hybrid live-action / animation: the bear is a high-end feature-film 3D animated
+  character with photoreal fluffy fur and an expressive animated face, composited
+  into a completely photorealistic real-world location shot on a cinema camera
+  with real lenses, natural light, real materials and real scale (the bear is small
+  next to real full-size towels and furniture), shallow depth of field, like a
+  family movie where an animated bear lives in the real world.
+negative: cartoon background, stylized environment, plastic look, anime, flat 2D cartoon, text, watermark, logo

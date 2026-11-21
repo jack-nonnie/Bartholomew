@@ -2,6 +2,8 @@
 # Estimates are for budgeting only — check real spend in output/<episode>/cost.json.
 # Endpoints get verified against fal's catalog before the first paid run.
 image_models:
+  nano_banana_21: {endpoint: google/nano-banana-2.1/edit,          est_cost: 0.09}
+  seedream55:    {endpoint: bytedance/seedream/v5.5/edit,         est_cost: 0.03}
   nano_banana:   {endpoint: fal-ai/nano-banana/edit,              est_cost: 0.0398}
   seedream:      {endpoint: fal-ai/bytedance/seedream/v4/edit,    est_cost: 0.03}
   kontext_multi: {endpoint: fal-ai/flux-pro/kontext/max/multi,    est_cost: 0.08}
@@ -17,7 +19,7 @@ audio_models:
   sfx:   {endpoint: fal-ai/mmaudio-v2,     est_cost: 0.01}   # video -> matching sound effects
   music: {endpoint: fal-ai/stable-audio,   est_cost: 0.05}   # text -> music bed
 defaults:
-  image_model: nano_banana
+  image_model: nano_banana_21
   video_model: kling_v4
   aspect_ratio: "9:16"
   resolution: 720p
