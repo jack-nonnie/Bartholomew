@@ -9,7 +9,7 @@ image_models:
   kontext_multi: {endpoint: fal-ai/flux-pro/kontext/max/multi,    est_cost: 0.08}
 video_models:
   # Prices from fal's pricing API (Nov 2026). Seedance bills per token (~108k tokens per 5s at 720p).
-  kling_v4:        {endpoint: kling/v4/image-to-video,                    est_cost_per_sec: 0.157, native_audio: false, min_sec: 3}
+  kling_v4:        {endpoint: kling/v4/image-to-video,                    est_cost_per_sec: 0.157, native_audio: true, min_sec: 3}
   kling_v4_flash:  {endpoint: kling/v4/flash/image-to-video,              est_cost_per_sec: 0.094, native_audio: false, min_sec: 3}
   veo31_fast:      {endpoint: fal-ai/veo3.1/fast/image-to-video,          est_cost_per_sec: 0.15,  native_audio: true,  min_sec: 4}
   veo31_lite:      {endpoint: fal-ai/veo3.1/lite/image-to-video,          est_cost_per_sec: 0.05,  native_audio: true,  min_sec: 4}
