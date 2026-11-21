@@ -137,6 +137,10 @@ def animate(ep_name: str, keyframe_dir: str, video_model: str | None = None,
     for shot in ep["shots"]:
         if shot_ids and shot["id"] not in shot_ids:
             continue
+        if shot.get("lock_clip") and (out / f"{shot['id']}.mp4").exists():
+            print(f"  [locked] {shot['id']} (keeping approved clip)")
+            files.append(out / f"{shot['id']}.mp4")
+            continue
         chosen = shot.get("keyframe_pick", 1)
         img = kdir / f"{shot['id']}_v{chosen}.png"
         args = video_args(video_model, prompts.video_prompt(shot, ep, style_id),

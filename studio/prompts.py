@@ -39,7 +39,10 @@ def video_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
         f"{_fill(shot['motion'], char)}. "
         f"Camera: {shot['camera']}. "
         f"Character performance: {per['motion']}; expressive face with {per['expressions']}. "
-        f"The bear keeps the same curly caramel fur, tiny black bead eyes and brown suede nose throughout. "
+        f"Continuity: keep everything from the first frame; the same outfit and props stay on the whole time, "
+        f"same framing and size. {shot.get('continuity', '')} "
+        f"The bear keeps the same curly caramel fur and brown suede nose throughout; his eyes always stay tiny "
+        f"glossy black beads, with no white eye whites and no cartoon eyes. "
         f"Style: {sty['prompt']}"
     )
 

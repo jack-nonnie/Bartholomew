@@ -1,6 +1,7 @@
 title: Spa Day
 style: film3d_bear_storybook_world   # chosen 2026-11-21: option-2 bear + option-4 world
 image_model: nano_banana_21
+video_model: kling_v4         # chosen 2026-11-21 after bake-off
 personality: playful    # any file in personalities/
 approved: true          # script approved 2026-11-21
 setting: >-
@@ -18,6 +19,7 @@ shots:
       {name} bounces up on tiptoes, taps the little bell with a paw, ding,
       then breaks into a huge delighted grin and wiggles with excitement
     camera: slow push-in, eye level with the bear
+    continuity: the white fluffy spa robe stays on him the whole time and stays bright white
     sfx: soft spa chimes, a bright little bell ding, happy squeak
   - id: s2_face_mask
     duration: 5
@@ -35,6 +37,7 @@ shots:
   - id: s3_bubble_bath
     duration: 5
     keyframe_pick: 2
+    lock_clip: true   # approved Kling take from the bake-off
     beat: Bubble bath
     keyframe: >-
       {name} standing on top of the wide wooden rim of a small round hot tub,
