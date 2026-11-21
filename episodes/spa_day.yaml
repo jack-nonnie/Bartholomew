@@ -4,6 +4,7 @@ image_model: nano_banana_21
 video_model: kling_v4         # chosen 2026-11-21 after bake-off
 personality: playful    # any file in personalities/
 approved: true          # script approved 2026-11-21
+keyframes_approved: true   # keyframes approved 2026-11-21 (B picks for s2, s4, s5)
 setting: >-
   a bright, cozy boutique day spa with cream walls, light wood, eucalyptus
   plants, rolled white towels, candles and soft natural light
@@ -23,6 +24,7 @@ shots:
     sfx: soft spa chimes, a bright little bell ding, happy squeak
   - id: s2_face_mask
     duration: 5
+    keyframe_pick: 2
     beat: Face mask
     keyframe: >-
       {name} reclining on a tiny cushioned lounge chair, a mint-green face mask
@@ -52,6 +54,7 @@ shots:
     sfx: bubbling water, big playful splash, popping bubbles
   - id: s4_massage
     duration: 5
+    keyframe_pick: 2
     beat: Hot stones
     keyframe: >-
       {name} lying belly-down on a tiny massage table with a white towel, a row
@@ -64,6 +67,7 @@ shots:
     sfx: soft stone clinks, gentle water trickle, happy sigh
   - id: s5_finale
     duration: 5
+    keyframe_pick: 2
     beat: Afterglow
     keyframe: >-
       {name} wrapped in a fluffy white towel with a little towel turban on the

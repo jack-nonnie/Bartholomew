@@ -192,9 +192,15 @@ def music(ep_name: str) -> Path:
     m = config.models()["audio_models"]["music"]
     log = config.out_dir(ep_name) / "cost.json"
     secs = ep.get("music", {}).get("duration", 25)
-    r = run(m["endpoint"], {"prompt": prompts.music_prompt(ep), "seconds_total": secs},
-            est_cost=m["est_cost"], log=log, label="music bed")
-    return download(first_url(r, "audio_file", "audio"), config.out_dir(ep_name) / "music.wav")
+    if m["endpoint"].startswith("elevenlabs/music"):
+        args = {"prompt": prompts.music_prompt(ep), "music_length_ms": int(secs * 1000),
+                "force_instrumental": True}
+        name = "music.mp3"
+    else:
+        args = {"prompt": prompts.music_prompt(ep), "seconds_total": secs}
+        name = "music.wav"
+    r = run(m["endpoint"], args, est_cost=m["est_cost"], log=log, label="music bed")
+    return download(first_url(r, "audio", "audio_file"), config.out_dir(ep_name) / name)
 
 
 # ---------- step 5: edit ----------

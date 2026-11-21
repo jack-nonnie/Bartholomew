@@ -17,7 +17,8 @@ video_models:
   seedance25_flash: {endpoint: bytedance/seedance-2.5/flash/image-to-video, est_cost_per_sec: 0.30, native_audio: true, min_sec: 4}
 audio_models:
   sfx:   {endpoint: fal-ai/mmaudio-v2,     est_cost: 0.01}   # video -> matching sound effects
-  music: {endpoint: fal-ai/stable-audio,   est_cost: 0.05}   # text -> music bed
+  music: {endpoint: elevenlabs/music/v2.5, est_cost: 0.25}   # text -> music bed ($0.60/min)
+  music_fallback: {endpoint: fal-ai/stable-audio, est_cost: 0.05}
 defaults:
   image_model: nano_banana_21
   video_model: kling_v4
