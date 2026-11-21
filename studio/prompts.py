@@ -15,14 +15,19 @@ def keyframe_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
     char = config.character()
     sty = config.style(style_id or ep["style"])
     per = config.personality(ep["personality"])
+    if sty.get("bear") and sty.get("world"):
+        look = (f"WORLD STYLE (most important, apply to everything except the bear): {' '.join(sty['world'].split())} "
+                f"BEAR RENDERING: {' '.join(sty['bear'].split())} ")
+    else:
+        look = f"VISUAL STYLE (most important, apply to the whole image): {sty['prompt']} "
     return (
-        f"VISUAL STYLE (most important, apply to the whole image): {sty['prompt']} "
+        look +
         f"CHARACTER: the reference photos show {char['name']}, a real plush teddy bear; keep his exact "
         f"design: {'; '.join(char['must_keep'])}. Full description: {char['identity']} "
         f"SCENE: {_fill(shot['keyframe'], char)}. "
-        f"SETTING: {' '.join(ep['setting'].split())}, rendered in the visual style above. "
+        f"SETTING: {' '.join(ep['setting'].split())}, rendered in the world style above. "
         f"Personality: {per['label'].lower()}, expressive animated face. "
-        f"Vertical 9:16 frame, the bear clearly visible and in focus. Do not copy the white photo backgrounds."
+        f"Vertical 9:16 frame, the bear clearly visible and in focus. Do not copy the backgrounds of the reference images."
     )
 
 

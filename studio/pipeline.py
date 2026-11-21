@@ -57,7 +57,8 @@ def video_args(model: str, prompt: str, negative: str, image: str, duration: int
     raise ValueError(model)
 
 
-def _ref_images() -> list[str]:
+def _ref_images(style_id: str | None = None) -> list[str]:
+    """Bear photos (or approved sheet) first, then the style's rendering references last."""
     char = config.character()
     sheet = config.ROOT / "character" / "sheet"
     approved = sorted(sheet.glob("*.png")) if sheet.exists() else []
@@ -65,7 +66,10 @@ def _ref_images() -> list[str]:
     missing = [r for r in refs if not (config.ROOT / r).exists()]
     if missing:
         raise SystemExit(f"Missing reference images: {missing}\nPut the bear photos in character/photos/.")
-    return refs[:6]
+    refs = refs[:6]
+    if style_id:
+        refs += config.style(style_id).get("style_refs", [])
+    return refs
 
 
 # ---------- step 1: character sheet ----------
@@ -100,7 +104,7 @@ def keyframes(ep_name: str, image_model: str | None = None, style_id: str | None
     m = cfg["image_models"][image_model]
     out = config.out_dir(ep_name) / "keyframes" / f"{style_id}_{image_model}"
     log = config.out_dir(ep_name) / "cost.json"
-    refs = _ref_images()
+    refs = _ref_images(style_id)
     files = []
     for shot in ep["shots"]:
         if shot_ids and shot["id"] not in shot_ids:

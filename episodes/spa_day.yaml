@@ -1,5 +1,6 @@
 title: Spa Day
-style: pixar3d          # stopmotion | pixar3d | liveaction  (decided by the bake-off)
+style: film3d_bear_storybook_world   # chosen 2026-11-21: option-2 bear + option-4 world
+image_model: nano_banana_21
 personality: playful    # any file in personalities/
 approved: true          # script approved 2026-11-21
 setting: >-
@@ -33,6 +34,7 @@ shots:
     sfx: tiny squish, crunch of cucumber, contented hum
   - id: s3_bubble_bath
     duration: 5
+    keyframe_pick: 2
     beat: Bubble bath
     keyframe: >-
       {name} standing on top of the wide wooden rim of a small round hot tub,

@@ -1,0 +1,21 @@
+id: film3d_bear_storybook_world
+label: Cinematic film bear in a storybook world
+# The bear and the world are rendered at deliberately different levels of realism.
+bear: >-
+  Render the bear exactly like the bear in the LAST reference image: a high-end
+  feature-film 3D character with rich, dense, photoreal curly fur with individual
+  fibers, realistic soft lighting on the fur, true-to-life caramel color, glossy
+  bead eyes and a suede nose, expressive animated face. The bear is NOT simplified
+  or cartoonified and must look more realistic and detailed than the world around him.
+world: >-
+  The environment is a fully stylized animated-feature storybook world: chunky
+  rounded cartoon architecture with soft bulging shapes and arched doorways and
+  windows, exaggerated playful proportions, oversized cute props, candy-pastel
+  peach, mint and butter-yellow palette, simplified hand-painted textures, glowing
+  magical soft light with floating sparkles, big glossy iridescent bubbles.
+prompt: >-
+  Cinematic feature-film 3D bear with rich photoreal fur, in a stylized pastel
+  storybook cartoon world with rounded arches, sparkles and glossy bubbles.
+style_refs:
+  - character/style_refs/film_bear.png
+negative: cartoonified bear, flat simple fur, plastic bear, photorealistic room, live action background, flat 2D, anime, text, watermark, logo
