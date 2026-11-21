@@ -234,8 +234,10 @@ def edit(ep_name: str, clips: list[Path], music_file: Path | None, xfade: float 
         mi = len(clips)
         filters.append(f"[{mi}:a]aresample=48000,volume=0.35,atrim=0:{total:.3f},"
                        f"afade=t=out:st={max(total - 1.5, 0):.3f}:d=1.5[mus]")
-        filters.append(f"[{a}][mus]amix=inputs=2:duration=first:normalize=0[afinal]")
-        a = "afinal"
+        filters.append(f"[{a}][mus]amix=inputs=2:duration=first:normalize=0[amixed]")
+        a = "amixed"
+    filters.append(f"[{a}]alimiter=limit=0.89:level=false,afade=t=out:st={max(total - 0.6, 0):.3f}:d=0.6[afinal]")
+    a = "afinal"
     filters.append(f"[{v}]fade=t=in:d=0.4,fade=t=out:st={max(total - 0.6, 0):.3f}:d=0.6[vfinal]")
     cmd = ["ffmpeg", "-y", *inputs, "-filter_complex", ";".join(filters),
            "-map", "[vfinal]", "-map", f"[{a}]", "-c:v", "libx264", "-crf", "18", "-preset", "medium",
