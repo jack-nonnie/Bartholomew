@@ -1,6 +1,6 @@
 # Character bible — the single source of truth for what the bear looks like.
 # Every image/video prompt starts with `identity`. Edit carefully: changes here change every episode.
-name: Bartholomew          # placeholder — rename to her bear's real name
+name: Bartholomew
 species: teddy bear plush
 identity: >-
   a chubby, round-bodied teddy bear plush with dense, curly, shaggy fur in a warm
@@ -25,7 +25,7 @@ avoid:                # fed into negative prompts where supported
 # Reference images. Put real photos in character/photos/. The generated
 # character sheet (after you approve it) goes in character/sheet/ and replaces these.
 reference_images:
-  - character/photos/front.jpg
-  - character/photos/side.jpg
-  - character/photos/back.jpg
-  - character/photos/front_2.jpg
+  - character/photos/Bartholomew/Bartholomew_front.png
+  - character/photos/Bartholomew/Bartholomew_front2.png
+  - character/photos/Bartholomew/Bartholomew_side.png
+  - character/photos/Bartholomew/Bartholomew_back.png

@@ -1,7 +1,7 @@
 title: Spa Day
 style: pixar3d          # stopmotion | pixar3d | liveaction  (decided by the bake-off)
 personality: playful    # any file in personalities/
-approved: false         # set true only after you approve the script below
+approved: true          # script approved 2026-11-21
 setting: >-
   a bright, cozy boutique day spa with cream walls, light wood, eucalyptus
   plants, rolled white towels, candles and soft natural light
