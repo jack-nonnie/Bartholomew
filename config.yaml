@@ -1,0 +1,19 @@
+# Model endpoints on fal.ai and rough per-call cost estimates (USD).
+# Estimates are for budgeting only — check real spend in output/<episode>/cost.json.
+# Endpoints get verified against fal's catalog before the first paid run.
+image_models:
+  nano_banana:   {endpoint: fal-ai/nano-banana/edit,              est_cost: 0.04}
+  seedream:      {endpoint: fal-ai/bytedance/seedream/v4/edit,    est_cost: 0.03}
+  kontext_multi: {endpoint: fal-ai/flux-pro/kontext/max/multi,    est_cost: 0.08}
+video_models:
+  kling:    {endpoint: fal-ai/kling-video/v2.1/master/image-to-video,      est_cost_per_sec: 0.28, native_audio: false}
+  veo_fast: {endpoint: fal-ai/veo3/fast/image-to-video,                    est_cost_per_sec: 0.25, native_audio: true}
+  seedance: {endpoint: fal-ai/bytedance/seedance/v1/pro/image-to-video,    est_cost_per_sec: 0.12, native_audio: false}
+audio_models:
+  sfx:   {endpoint: fal-ai/mmaudio-v2,     est_cost: 0.01}   # video -> matching sound effects
+  music: {endpoint: fal-ai/stable-audio,   est_cost: 0.05}   # text -> music bed
+defaults:
+  image_model: nano_banana
+  video_model: kling
+  aspect_ratio: "9:16"
+  resolution: 720p

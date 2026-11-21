@@ -1,0 +1,71 @@
+title: Spa Day
+style: pixar3d          # stopmotion | pixar3d | liveaction  (decided by the bake-off)
+personality: playful    # any file in personalities/
+approved: false         # set true only after you approve the script below
+setting: >-
+  a bright, cozy boutique day spa with cream walls, light wood, eucalyptus
+  plants, rolled white towels, candles and soft natural light
+shots:
+  - id: s1_arrival
+    duration: 5
+    beat: Arrival
+    keyframe: >-
+      {name} wearing a tiny fluffy white spa robe, peeking over the edge of the
+      spa's wooden reception counter, only head, ears and paws visible,
+      wide-eyed and excited, a small sign-in bell beside them
+    motion: >-
+      {name} bounces up on tiptoes, taps the little bell with a paw, ding,
+      then breaks into a huge delighted grin and wiggles with excitement
+    camera: slow push-in, eye level with the bear
+    sfx: soft spa chimes, a bright little bell ding, happy squeak
+  - id: s2_face_mask
+    duration: 5
+    beat: Face mask
+    keyframe: >-
+      {name} reclining on a tiny cushioned lounge chair, a mint-green face mask
+      on the muzzle area and two cucumber slices over the eyes, towel under the
+      head, relaxed pose
+    motion: >-
+      one cucumber slice slowly slides off; {name} opens one eye, looks
+      surprised, then grins mischievously, pops the cucumber in their mouth, and
+      leans back satisfied
+    camera: static close-up, slight top-down angle
+    sfx: tiny squish, crunch of cucumber, contented hum
+  - id: s3_bubble_bath
+    duration: 5
+    beat: Bubble bath
+    keyframe: >-
+      {name} standing on the rim of a small round wooden hot tub overflowing
+      with soap bubbles and foam, arms raised, about to jump in, steam rising
+    motion: >-
+      {name} hops in with a cannonball splash, foam explodes upward, then pops
+      back up wearing a big bubble crown on their head, giggling with eyes
+      squeezed shut and paddling paws
+    camera: medium shot, slight low angle, follows the splash
+    sfx: bubbling water, big playful splash, popping bubbles
+  - id: s4_massage
+    duration: 5
+    beat: Hot stones
+    keyframe: >-
+      {name} lying belly-down on a tiny massage table with a white towel, a row
+      of smooth black hot stones along their back, chin resting on crossed paws,
+      candles glowing nearby
+    motion: >-
+      {name} kicks their little feet happily in the air, wiggles, and melts into
+      the table with a blissful squeezed-eye smile as warm steam drifts up
+    camera: gentle side tracking shot
+    sfx: soft stone clinks, gentle water trickle, happy sigh
+  - id: s5_finale
+    duration: 5
+    beat: Afterglow
+    keyframe: >-
+      {name} wrapped in a fluffy white towel with a little towel turban on the
+      head, sitting on a big round cushion holding a tiny teacup, glowing and
+      fluffier than ever
+    motion: >-
+      {name} takes a sip of tea, gives a big satisfied grin to the camera, then
+      flops backward into the soft cushion with arms out, paws in the air
+    camera: slow pull-back revealing the cozy spa room
+    sfx: teacup clink, soft flop on cushion, music swells and fades
+music:
+  duration: 25
