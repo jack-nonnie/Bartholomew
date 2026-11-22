@@ -6,6 +6,7 @@ One entry per episode, newest first. Record what was made, what it cost, what th
 
 ## Ep 1: Spa Day (2026-11-21), pilot
 **Video:** `videos/bartholomew_spa_day.mp4` (23.6s, 1080×1920, Kling native sound effects + music)
+**Approved keyframes + final script:** `episodes/assets/spa_day/` (reusable as extra bear references)
 
 **Locked decisions made during the pilot**
 - Style: `film3d_bear_storybook_world`. The user picked the bear from "option 2" (cinematic animated-film 3D, rich fur) and the world from "option 4" (pastel storybook). Other styles tried and rejected: stop-motion, live-action, photoreal world, miniature diorama.
