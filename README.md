@@ -1,35 +1,41 @@
 # Bartholomew
 
-AI-generated short videos of Bartholomew the teddy bear doing everyday things (first episode: **Spa Day**).
-Built on [fal.ai](https://fal.ai) models, with ffmpeg for editing.
+AI-generated short videos of Bartholomew the teddy bear doing everyday things.
+**Episode 1: [Spa Day](videos/bartholomew_spa_day.mp4)** (23.6s, vertical, with sound).
+
+Built on [fal.ai](https://fal.ai) models (Nano Banana 2.1 for still images, Kling 4.0 for video, ElevenLabs Music) and ffmpeg for editing.
+
+## Making a new video
+In a Claude Code session with this repo selected, say something like:
+> Let's make a new Bartholomew video: a beach day
+
+Claude follows `.claude/skills/new-episode/SKILL.md`. You approve the script and prompts, then pick the still images, then get the finished video. A typical episode costs about $5.
 
 ## How it stays consistent
 Every prompt is assembled from four layers, and only the last one changes between videos:
 
 | Layer | File | What it holds |
 |---|---|---|
-| Character | `character/character.yaml` + `character/photos/` | What the bear looks like (the "character bible") and reference photos |
-| Style | `styles/*.yaml` | The look: `stopmotion`, `pixar3d`, `liveaction` |
+| Character | `character/character.yaml`, `character/photos/`, `character/style_refs/` | What the bear looks like and how he's rendered |
+| Style | `styles/film3d_bear_storybook_world.yaml` | The series look: film-quality bear in a pastel storybook world |
 | Personality | `personalities/*.yaml` | How he moves and emotes: `playful`, `cozy`, `diva` |
-| Episode | `episodes/*.yaml` | The shot list for one video |
+| Episode | `episodes/*.yaml` | The shot list for one video (template: `episodes/_template.yaml`) |
 
-## Workflow (every paid step has an approval gate)
+## Commands
 ```bash
-pip install fal-client pyyaml          # plus ffmpeg on PATH; set FAL_KEY
-
-python -m studio.cli script spa_day                     # free: script + exact prompts -> review
-# set `approved: true` in the episode file
-python -m studio.cli keyframes spa_day --variants 2     # still images per shot (cheap)
-# pick keyframes (`keyframe_pick:` per shot), set `keyframes_approved: true`
-python -m studio.cli animate spa_day --keyframes output/spa_day/keyframes/<style>_<model>
-python -m studio.cli finish  spa_day --clips output/spa_day/clips/<dir>   # sfx + music + edit -> final.mp4
+bash scripts/check_env.sh                              # free pre-flight check
+python -m studio.cli new beach_day                     # new episode file from the template
+python -m studio.cli script beach_day                  # script + exact prompts (approval gate 1)
+python -m studio.cli keyframes beach_day --variants 2  # still images
+python -m studio.cli review keyframes beach_day        # comparison grid (approval gate 2)
+python -m studio.cli animate beach_day                 # video clips
+python -m studio.cli review clips beach_day            # frame contact sheet to check consistency
+python -m studio.cli finish beach_day                  # music + edit -> videos/bartholomew_beach_day.mp4
 ```
 Results are cached by prompt, so re-running never pays twice for the same shot. Spend is logged to `output/<episode>/cost.json`.
 
-## New episode
-Copy `episodes/spa_day.yaml`, rewrite the shots, keep `style` and `personality` the same, then run the workflow.
-
-## Models (prices from fal, Nov 2026, per 5s 720p clip)
-- Images: `fal-ai/nano-banana/edit` (~$0.04/image)
-- Video: Kling 4.0 (~$0.79), Veo 3.1 Fast (~$0.90 for 6s, includes audio), Seedance 2.5 (~$2.30, includes audio); cheaper Flash/Lite tiers are configured in `config.yaml`
-- Audio: `fal-ai/mmaudio-v2` (sound effects), `fal-ai/stable-audio` (music)
+## Docs
+- `CLAUDE.md`: project memory, loaded automatically by Claude Code
+- `docs/LESSONS.md`: everything learned so far, updated after every episode
+- `docs/EPISODE_LOG.md`: what each episode used, cost and what to change next time
+- `.claude/skills/model-scout/SKILL.md`: how to check for newer or cheaper models

@@ -1,0 +1,43 @@
+# Episode template. Copy with:  python -m studio.cli new <episode_name>
+# Read docs/LESSONS.md ("Writing shots") before filling this in.
+#
+# Only the parts marked EDIT change between episodes. style / models / personality stay
+# the same for series consistency unless the user explicitly asks for a change.
+
+title: EDIT Episode Title            # e.g. Beach Day
+style: film3d_bear_storybook_world   # LOCKED series look: option-2 film bear + option-4 storybook world
+image_model: nano_banana_21          # LOCKED (google/nano-banana-2.1/edit, ~$0.09/image)
+video_model: kling_v4                # LOCKED (kling/v4/image-to-video, ~$0.79 per 5s, native audio)
+personality: playful                 # playful | cozy | diva  (files in personalities/)
+
+approved: false                      # GATE 1: set true ONLY after the user approves the script + prompts
+keyframes_approved: false            # GATE 2: set true ONLY after the user picks keyframes
+
+# One sentence describing the world. It is rendered in the storybook style automatically,
+# so describe *what is there*, not the art style.
+setting: >-
+  EDIT a sunny seaside beach with pastel beach huts, striped umbrellas, soft sand and gentle waves
+
+# 4-6 shots of 5s each = 20-30s. Story arc: arrive -> 2-3 activity gags -> payoff/finale.
+# Each shot = ONE clear action. Kling handles one beat per 5s well; two beats gets messy.
+shots:
+  - id: s1_EDIT                      # short snake_case id, prefixed s1_, s2_, ...
+    duration: 5
+    beat: EDIT                       # 1-2 word label shown in the script
+    # Keyframe = the FIRST frame of the shot (a still). Describe the exact pose with literal,
+    # physical wording: where he stands/sits, what he holds, what he wears, his expression.
+    # Say what is NOT happening yet if the motion will change it ("dry, NOT yet in the water").
+    keyframe: >-
+      {name} EDIT
+    # Motion = what happens over 5 seconds, starting from the keyframe. One beat + a reaction.
+    motion: >-
+      {name} EDIT
+    camera: EDIT                     # e.g. slow push-in, eye level / static close-up / gentle side tracking
+    # Continuity = what must NOT change during the clip (outfits, props, colors). Kling drifts here.
+    continuity: EDIT e.g. the straw sun hat stays on his head the whole time
+    sfx: EDIT                        # what you should hear (Kling generates native audio from the prompt)
+    # keyframe_pick: 2               # set after the user chooses a variant (default 1)
+    # lock_clip: true                # keep an approved clip; never re-render/re-bill it
+
+music:
+  duration: 25                       # seconds; ~ total shot length. Mood comes from the personality file.

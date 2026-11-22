@@ -246,6 +246,17 @@ def edit(ep_name: str, clips: list[Path], music_file: Path | None, xfade: float 
     return out
 
 
+def default_dirs(ep_name: str) -> dict:
+    """Where this episode's keyframes and clips live, from its own style/model settings."""
+    ep = config.episode(ep_name)
+    d = config.models()["defaults"]
+    style = ep["style"]
+    im = ep.get("image_model") or d["image_model"]
+    vm = ep.get("video_model") or d["video_model"]
+    kdir = f"output/{ep_name}/keyframes/{style}_{im}"
+    return {"keyframes": kdir, "clips": f"output/{ep_name}/clips/{style}_{im}_{vm}"}
+
+
 def estimate(ep_name: str) -> dict:
     ep = config.episode(ep_name)
     cfg = config.models()
