@@ -4,7 +4,7 @@ image_model: nano_banana_21          # LOCKED
 video_model: kling_v4                # LOCKED
 personality: playful
 
-approved: false                      # GATE 1
+approved: true                       # script approved 2026-11-25
 keyframes_approved: false            # GATE 2
 
 setting: >-
