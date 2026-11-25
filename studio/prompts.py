@@ -14,7 +14,7 @@ def keyframe_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
     """Style first (so the model commits to the look), then character, then the shot."""
     char = config.character()
     sty = config.style(style_id or ep["style"])
-    per = config.personality(ep["personality"])
+    per = config.personality(shot.get("personality") or ep["personality"])
     if sty.get("bear") and sty.get("world"):
         look = (f"WORLD STYLE (most important, apply to everything except the bear): {' '.join(sty['world'].split())} "
                 f"BEAR RENDERING: {' '.join(sty['bear'].split())} ")
@@ -34,7 +34,7 @@ def keyframe_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
 def video_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
     char = config.character()
     sty = config.style(style_id or ep["style"])
-    per = config.personality(ep["personality"])
+    per = config.personality(shot.get("personality") or ep["personality"])
     return (
         f"{_fill(shot['motion'], char)}. "
         f"Camera: {shot['camera']}. "

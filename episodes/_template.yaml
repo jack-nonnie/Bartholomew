@@ -9,6 +9,7 @@ style: film3d_bear_storybook_world   # LOCKED series look: option-2 film bear + 
 image_model: nano_banana_21          # LOCKED (google/nano-banana-2.1/edit, ~$0.09/image)
 video_model: kling_v4                # LOCKED (kling/v4/image-to-video, ~$0.79 per 5s, native audio)
 personality: playful                 # playful | cozy | diva  (files in personalities/)
+                                     # a shot can override it with its own `personality:` (e.g. sleepy)
 
 approved: false                      # GATE 1: set true ONLY after the user approves the script + prompts
 keyframes_approved: false            # GATE 2: set true ONLY after the user picks keyframes

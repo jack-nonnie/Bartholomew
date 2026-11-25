@@ -55,11 +55,14 @@ shots:
       pastel-blue mat lies on the floor behind the treadmill
     motion: >-
       the treadmill starts and {name} jogs, then it speeds up faster and faster
-      until his little legs blur, and he is swept off the back onto the soft
-      blue mat, lands on his bottom, and sits up grinning
+      until his little legs blur and can't keep up; his feet slip out from under
+      him, he pitches forward and lands flat on his face on the moving belt, arms
+      and legs splayed out like a starfish, and the belt carries him off the back
+      end, sliding him face-down onto the soft blue mat; he lifts his head,
+      blinks, and grins at the camera
     camera: side view, medium-wide, static
     continuity: the red sweatband headband and red wristbands stay on; the treadmill stays mint green
-    sfx: treadmill whir speeding up, quick little footsteps, soft thump on the mat
+    sfx: treadmill whir speeding up, quick little footsteps, a soft face-plant flump, a little squeak as he slides onto the mat
   - id: s4_jump_rope
     duration: 5
     beat: Jump rope
@@ -68,15 +71,19 @@ shots:
       floor mat holding one handle of a pink jump rope in each paw, the rope
       resting on the floor behind his feet, focused eager face, NOT yet skipping
     motion: >-
-      {name} starts skipping the pink jump rope, faster and faster, until the
-      rope wraps around his round body like a little parcel; he hops in place
-      all bundled up and gives the camera a sheepish grin
+      {name} starts skipping the pink jump rope, faster and faster, until he
+      misses a jump and the rope catches on his feet; as he spins around trying
+      to untangle it, the rope coils around and around his round tummy and pins
+      his arms to his sides, wrapping him snugly from shoulders to knees in neat
+      pink loops like a wrapped parcel, the two handles dangling at his side;
+      he hops in place all bundled up and gives the camera a sheepish grin
     camera: static medium shot, eye level
     continuity: the red sweatband headband and red wristbands stay on; there is only one jump rope and it stays pink
-    sfx: rope whip-whip-whip speeding up, little hops on the mat, a soft boing
+    sfx: rope whip-whip-whip speeding up, a quick tangle swish, little hops on the mat
   - id: s5_tuckered_out
     duration: 5
     beat: Tuckered out
+    personality: sleepy               # per-shot override (user request)
     keyframe: >-
       {name} wearing a red sweatband headband and red wristbands, sitting on a
       wooden gym bench with a small white towel draped over his shoulders,
