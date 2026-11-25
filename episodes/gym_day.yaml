@@ -90,6 +90,7 @@ shots:
     sfx: rope whip-whip-whip speeding up, a quick tangle swish, little hops on the mat
   - id: s5_tuckered_out
     duration: 5
+    lock_clip: true                   # take 2 approved
     keyframe_pick: 1
     beat: Tuckered out
     personality: sleepy               # per-shot override (user request)
