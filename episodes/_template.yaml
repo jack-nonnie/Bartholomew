@@ -35,9 +35,10 @@ shots:
     camera: EDIT                     # e.g. slow push-in, eye level / static close-up / gentle side tracking
     # Continuity = what must NOT change during the clip (outfits, props, colors). Kling drifts here.
     continuity: EDIT e.g. the straw sun hat stays on his head the whole time
-    sfx: EDIT                        # what you should hear (Kling generates native audio from the prompt)
+    sfx: EDIT                        # what you should hear (Kling native audio). Avoid 'giggle' - user found it overdone
     # keyframe_pick: 2               # set after the user chooses a variant (default 1)
     # lock_clip: true                # keep an approved clip; never re-render/re-bill it
 
 music:
-  duration: 25                       # seconds; ~ total shot length. Mood comes from the personality file.
+  duration: 25                       # seconds; ~ total shot length.
+  # mood: EDIT optional; overrides the personality's music_mood (e.g. upbeat workout-montage music)

@@ -43,6 +43,8 @@ def video_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
         f"same framing and size. {shot.get('continuity', '')} "
         f"The bear keeps the same curly caramel fur and brown suede nose throughout; his eyes always stay tiny "
         f"glossy black beads, with no white eye whites and no cartoon eyes. "
+        f"Sound: {shot.get('sfx', '')}. No voice, no speech, no giggling or laughing sounds "
+        f"(at most one brief soft chuckle). "
         f"Style: {sty['prompt']}"
     )
 
@@ -58,5 +60,5 @@ def sfx_prompt(shot: dict) -> str:
 
 
 def music_prompt(ep: dict) -> str:
-    per = config.personality(ep["personality"])
-    return f"{per['music_mood']}, instrumental, warm, gentle, loopable, no vocals, high quality"
+    mood = ep.get("music", {}).get("mood") or config.personality(ep["personality"])["music_mood"]
+    return f"{' '.join(mood.split())}, instrumental, warm, loopable, no vocals, high quality"

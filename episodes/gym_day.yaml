@@ -1,0 +1,95 @@
+title: Gym Day
+style: film3d_bear_storybook_world   # LOCKED series look
+image_model: nano_banana_21          # LOCKED
+video_model: kling_v4                # LOCKED
+personality: playful
+
+approved: false                      # GATE 1
+keyframes_approved: false            # GATE 2
+
+setting: >-
+  a bright, cheerful little gym with mint-green and peach exercise equipment, a
+  light wood floor, squishy pastel-blue floor mats, big sunny windows and a
+  water cooler in the corner
+
+shots:
+  - id: s1_warm_up
+    duration: 5
+    beat: Warm-up
+    keyframe: >-
+      {name} wearing a red terry-cloth sweatband headband and matching red
+      wristbands, standing on a pastel-blue floor mat with both arms stretched
+      straight up over his head in a big warm-up stretch, eager determined
+      smile, NOT yet bending over
+    motion: >-
+      {name} bends down to touch his toes, wobbles back and forth, then tips
+      over sideways onto the soft mat and pops right back up with a big proud
+      grin
+    camera: static medium shot, eye level with the bear
+    continuity: the red sweatband headband and both red wristbands stay on him the whole time and stay bright red
+    sfx: soft gym ambience, squeaky mat, a little surprised "oof", soft plop
+  - id: s2_big_lift
+    duration: 5
+    beat: Big lift
+    keyframe: >-
+      {name} wearing a red sweatband headband and red wristbands, standing on a
+      floor mat gripping a small shiny silver barbell with both paws at chest
+      height; a big translucent red gummy bear is stuck on the left end of the
+      bar and a big translucent green gummy bear on the right end, as the
+      weights; determined puffed-cheek face, the barbell NOT yet lifted overhead
+    motion: >-
+      {name} pushes the barbell proudly up over his head, then the red gummy
+      bear slowly slides off the left end and lands on the mat with a wobbly
+      jelly bounce; the bar tips toward the heavy green side and {name} topples
+      over sideways onto the mat, wide-eyed with surprise
+    camera: static medium shot, slight low angle
+    continuity: the red sweatband headband and red wristbands stay on; the gummy bears stay translucent red and green and keep their gummy bear shape
+    sfx: squishy jelly wobble, rubbery bounce, soft thud on the mat, mat squeak
+  - id: s3_treadmill
+    duration: 5
+    beat: Treadmill
+    keyframe: >-
+      {name} wearing a red sweatband headband and red wristbands, standing on
+      the belt of a small mint-green treadmill, paws holding the side rails,
+      ready to run with an excited face, the belt NOT yet moving; a soft
+      pastel-blue mat lies on the floor behind the treadmill
+    motion: >-
+      the treadmill starts and {name} jogs, then it speeds up faster and faster
+      until his little legs blur, and he is swept off the back onto the soft
+      blue mat, lands on his bottom, and sits up grinning
+    camera: side view, medium-wide, static
+    continuity: the red sweatband headband and red wristbands stay on; the treadmill stays mint green
+    sfx: treadmill whir speeding up, quick little footsteps, soft thump on the mat
+  - id: s4_jump_rope
+    duration: 5
+    beat: Jump rope
+    keyframe: >-
+      {name} wearing a red sweatband headband and red wristbands, standing on a
+      floor mat holding one handle of a pink jump rope in each paw, the rope
+      resting on the floor behind his feet, focused eager face, NOT yet skipping
+    motion: >-
+      {name} starts skipping the pink jump rope, faster and faster, until the
+      rope wraps around his round body like a little parcel; he hops in place
+      all bundled up and gives the camera a sheepish grin
+    camera: static medium shot, eye level
+    continuity: the red sweatband headband and red wristbands stay on; there is only one jump rope and it stays pink
+    sfx: rope whip-whip-whip speeding up, little hops on the mat, a soft boing
+  - id: s5_tuckered_out
+    duration: 5
+    beat: Tuckered out
+    keyframe: >-
+      {name} wearing a red sweatband headband and red wristbands, sitting on a
+      wooden gym bench with a small white towel draped over his shoulders,
+      hugging the big translucent red gummy bear in his arms, eyelids half
+      closed and drowsy, NOT yet asleep
+    motion: >-
+      {name}'s eyes slowly droop, he gives a tiny yawn, then slowly tips over
+      sideways onto the bench and falls asleep with a peaceful smile, still
+      hugging the red gummy bear
+    camera: slow push-in, eye level
+    continuity: the red sweatband headband, red wristbands and white towel stay on; the gummy bear stays translucent red in his arms
+    sfx: soft yawn, gentle little snore, quiet gym ambience
+
+music:
+  duration: 25
+  mood: upbeat, bouncy, funny workout-montage music with plucky synth bass, hand claps and marimba, energetic but cute, gently winding down at the end
