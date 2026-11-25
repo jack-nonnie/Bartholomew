@@ -5,7 +5,7 @@ video_model: kling_v4                # LOCKED
 personality: playful
 
 approved: true                       # script approved 2026-11-25
-keyframes_approved: false            # GATE 2
+keyframes_approved: true             # GATE 2: picks B,A,A,A,A approved 2026-11-25
 
 setting: >-
   a bright, cheerful little gym with mint-green and peach exercise equipment, a
@@ -15,6 +15,7 @@ setting: >-
 shots:
   - id: s1_warm_up
     duration: 5
+    keyframe_pick: 2
     beat: Warm-up
     keyframe: >-
       {name} wearing a red terry-cloth sweatband headband and matching red
@@ -30,6 +31,7 @@ shots:
     sfx: soft gym ambience, squeaky mat, a little surprised "oof", soft plop
   - id: s2_big_lift
     duration: 5
+    keyframe_pick: 1
     beat: Big lift
     keyframe: >-
       {name} wearing a red sweatband headband and red wristbands, standing on a
@@ -47,6 +49,7 @@ shots:
     sfx: squishy jelly wobble, rubbery bounce, soft thud on the mat, mat squeak
   - id: s3_treadmill
     duration: 5
+    keyframe_pick: 1
     beat: Treadmill
     keyframe: >-
       {name} wearing a red sweatband headband and red wristbands, standing on
@@ -65,6 +68,7 @@ shots:
     sfx: treadmill whir speeding up, quick little footsteps, a soft face-plant flump, a little squeak as he slides onto the mat
   - id: s4_jump_rope
     duration: 5
+    keyframe_pick: 1
     beat: Jump rope
     keyframe: >-
       {name} wearing a red sweatband headband and red wristbands, standing on a
@@ -82,6 +86,7 @@ shots:
     sfx: rope whip-whip-whip speeding up, a quick tangle swish, little hops on the mat
   - id: s5_tuckered_out
     duration: 5
+    keyframe_pick: 1
     beat: Tuckered out
     personality: sleepy               # per-shot override (user request)
     keyframe: >-
