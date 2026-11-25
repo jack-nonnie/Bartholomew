@@ -15,6 +15,7 @@ setting: >-
 shots:
   - id: s1_warm_up
     duration: 5
+    lock_clip: true
     keyframe_pick: 2
     beat: Warm-up
     keyframe: >-
@@ -31,6 +32,7 @@ shots:
     sfx: soft gym ambience, squeaky mat, a little surprised "oof", soft plop
   - id: s2_big_lift
     duration: 5
+    lock_clip: true
     keyframe_pick: 1
     beat: Big lift
     keyframe: >-
@@ -49,6 +51,7 @@ shots:
     sfx: squishy jelly wobble, rubbery bounce, soft thud on the mat, mat squeak
   - id: s3_treadmill
     duration: 5
+    lock_clip: true
     keyframe_pick: 1
     beat: Treadmill
     keyframe: >-
@@ -68,6 +71,7 @@ shots:
     sfx: treadmill whir speeding up, quick little footsteps, a soft face-plant flump, a little squeak as he slides onto the mat
   - id: s4_jump_rope
     duration: 5
+    lock_clip: true
     keyframe_pick: 1
     beat: Jump rope
     keyframe: >-
@@ -95,10 +99,13 @@ shots:
       hugging the big translucent red gummy bear in his arms, eyelids half
       closed and drowsy, NOT yet asleep
     motion: >-
-      {name}'s eyes slowly droop, he gives a tiny yawn, then slowly tips over
-      sideways onto the bench and falls asleep with a peaceful smile, still
-      hugging the red gummy bear
-    camera: slow push-in, eye level
+      {name}'s eyes droop and he gives one tiny yawn; then, within the first
+      two seconds, his whole body slowly tips sideways until he is lying fully
+      on his side along the bench, head resting on the bench, still hugging the
+      red gummy bear to his chest; for the rest of the shot he lies there fast
+      asleep with eyes closed and a peaceful smile, tummy gently rising and
+      falling
+    camera: static medium shot, eye level, the whole bench in frame
     continuity: the red sweatband headband, red wristbands and white towel stay on; the gummy bear stays translucent red in his arms
     sfx: soft yawn, gentle little snore, quiet gym ambience
 
