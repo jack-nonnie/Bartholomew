@@ -5,7 +5,7 @@ video_model: kling_v4                # LOCKED
 personality: playful
 
 approved: true                       # script approved 2026-11-28
-keyframes_approved: false            # GATE 2
+keyframes_approved: true             # picks B,B,B,A + new peak v1, approved 2026-11-28
 
 setting: >-
   a sunny storybook hiking trail through rolling green hills, with a winding
@@ -103,6 +103,7 @@ shots:
     sfx: huffing breaths, grass swishing, a whoosh as he slides, soft tumbling thumps, a gentle flump into flowers
   - id: s5_summit
     duration: 5
+    keyframe_pick: 1
     beat: Summit
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, standing
