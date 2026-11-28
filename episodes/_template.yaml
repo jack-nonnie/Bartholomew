@@ -31,6 +31,11 @@ shots:
     keyframe: >-
       {name} EDIT
     # Motion = what happens over 5 seconds, starting from the keyframe. One beat + a reaction.
+    # USER PREFERENCE: write it in RICH, step-by-step physical detail (3-5 sentences):
+    #   1) how it starts, 2) exactly how the body/prop moves (which way, how fast, what slips/catches),
+    #   3) where he ends up (lying on his side along the bench / face-down on the mat / wrapped
+    #   shoulders-to-knees in loops), 4) the final expression. Add timing ("within the first two
+    #   seconds") for the key change. Vague lines ("tips over and falls asleep") get skipped by Kling.
     motion: >-
       {name} EDIT
     camera: EDIT                     # e.g. slow push-in, eye level / static close-up / gentle side tracking

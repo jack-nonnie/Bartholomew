@@ -19,6 +19,7 @@ bash scripts/check_env.sh
 2. Run `python -m studio.cli new <snake_name>`, then fill in `episodes/<snake_name>.yaml`. Follow the comments in `_template.yaml`:
    - 4–6 shots × 5s. Arc: arrival → 2–3 activity gags → payoff finale.
    - **One beat per shot** (an action plus a reaction).
+   - `motion`: **rich, step-by-step detail** (the user asked for this): how it starts, exactly how the body and props move, where he ends up, his final expression, plus timing for the key change. Short, vague motion lines get skipped.
    - `keyframe`: the literal first-frame pose; say what is NOT happening yet.
    - `continuity`: outfits and props that must not change.
    - `sfx`: what should be heard.

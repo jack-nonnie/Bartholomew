@@ -7,6 +7,8 @@ This is a living document. **Read it before starting any episode**, and **append
 ## The user's preferences (standing instructions)
 - **Approval gate 1:** before any paid generation, show the script **and the exact prompts**. The user wants to approve them first.
 - **Approval gate 2:** the user picks the keyframes (still images) before any video is generated.
+- **Video prompts should be richly detailed** (requested after Gym Day): describe each motion step by step, not in one short line.
+- **Giggling:** keep it to a minimum. After Spa Day the user said "a little is good, but it was overdone". *(built in: the video prompt says no giggling except at most one brief soft chuckle; "giggling" is removed from the playful personality)*
 - They like **options with a clear recommendation**: "here are A/B, I'd pick B because…". When asked for "more options", vary one dimension at a time; the world-realism ladder worked well.
 - **Budget:** spending more early to get the product right is fine. Over time, push costs down. Always state the cost before spending and the running total after.
 - **Look:** expressive animation (expressions don't need to be subtle), playful personality (configurable), no on-screen text, music + sound effects with no voice, vertical 9:16, 15–30s.
@@ -39,6 +41,7 @@ This is a living document. **Read it before starting any episode**, and **append
 - Nano Banana 2.1 output is 768×1376 at 1K. That's plenty for 720p video.
 
 ## Video generation
+- **Per-shot personality:** a shot can set `personality:` (e.g. `sleepy` for a nap finale). It changes the performance text for that shot only. *(built in)*
 - **Bake-off results** (2 shots, same keyframes, 2026-11-21):
   - **Kling 4.0** (~$0.79/5s): the most energetic, fun motion and the best bath gag (a bubble crown), but it **drifted**: the robe vanished and one frame had cartoon googly eyes. **The user chose this one.**
   - **Veo 3.1 Fast** (~$0.90 for 6s; only 4, 6 or 8s): a big splash, but it changed the white robe to blue-grey, and the wet fur looked blotchy.
@@ -46,10 +49,14 @@ This is a living document. **Read it before starting any episode**, and **append
 - **Kling's drift was fixed with a continuity line** in every video prompt: "keep everything from the first frame; the same outfit and props stay on; eyes always stay tiny glossy black beads, no white eye whites, no cartoon eyes", plus a per-shot `continuity:` field. After that, all 4 production clips stayed on-model. *(built in: `studio/prompts.py`, the template's `continuity:`)*
 - Kling v4 parameters: `start_image_url`, `duration` (integer, 3–30), `resolution` (720p/1080p/4k), optional `end_image_url`/`multi_prompt`. **There's no negative-prompt field**, so anything that must not change goes in the positive prompt.
 - **One beat per 5s shot.** Kling plays "action + reaction" well, e.g. "takes a sip, grins at camera, flops back".
+- **Detailed motion text wins** (Gym Day, and the user's standing request). The rope wrap ("coils around his tummy, pins his arms, wrapped shoulders to knees in pink loops, handles dangling") and the treadmill face-plant came out exactly as written. The vague "slowly tips over and falls asleep" was ignored: he just closed his eyes. Rewriting it as "within the first two seconds, tips sideways until lying fully on his side along the bench, head on the bench… asleep for the rest of the shot", with a static camera, worked first try. *(built in: template + skill guidance)*
+- **A push-in camera can swallow the action.** Use a static camera with "the whole bench in frame" when the beat is a body movement.
+- Kling sometimes swaps a topple for something bigger: a cartwheel tumble in the warm-up, or flying over the *front* of the treadmill. These were fun and kept, but if direction matters, state it ("falls backward off the rear end").
 - **Lock good clips.** `lock_clip: true` keeps an approved take when prompt text changes, which otherwise changes the cache key and re-bills. *(built in)*
 - After rendering, **always run `review clips` and look at the contact sheet** before showing the user. Re-roll at most one bad shot without asking; ask before spending more.
 
 ## Audio
+- **Per-episode music mood:** `music.mood` in the episode yaml overrides the personality's `music_mood`. Gym Day used "upbeat funny workout-montage, plucky synth bass, claps, marimba". *(built in)*
 - **All three video models produce usable native audio** (sound effects and ambience), so the separate sound-effects step (MMAudio) isn't needed for Kling. `add_sfx` only touches silent clips.
 - **Music:** `elevenlabs/music/v2.5` ($0.60/min, `music_length_ms`, `force_instrumental: true`) gave a good 25s marimba and pizzicato track. `google/lyria-3.5` ($0.10 per track) is a cheaper alternative worth trying.
 - **I can't hear audio.** Check with `ffmpeg -af volumedetect`; music should have a mean around −20 dB. **Ask the user to listen** to the final cut.
@@ -69,7 +76,7 @@ This is a living document. **Read it before starting any episode**, and **append
 - Run tests on 2 representative shots (one calm, one action-heavy) before spending on a full episode.
 
 ## Open ideas (try these, then record the result above)
-- [ ] **Kling 4.0 Flash** (`kling/v4/flash/image-to-video`, ~$0.47/5s) to cut video cost by about 40%. Test 1 shot against standard Kling.
+- [~] **Kling 4.0 Flash** (`kling/v4/flash/image-to-video`, $0.094/s = $0.47/5s). **Tested on Gym Day s3 (treadmill):** nearly the same motion as standard, a slightly weaker face-plant and ending, and a brief red band appeared around his waist mid-fall. **It does have native audio** (−21 dB mean; config fixed). The user hasn't decided yet; ask before switching. Side by side: the Gym Day `flash_vs_standard_treadmill.mp4` comparison (output, not kept).
 - [ ] **Kling 4.0 reference-to-video** (`kling/v4/reference-to-video`, `elements` + `image_urls`) for even stronger character lock. It takes the photos and `film_bear.png`.
 - [ ] A **canonical character sheet** (front, 3/4, side, back, plus expressions) in the locked style, via `python -m studio.cli sheet`. Use it as references instead of raw photos once approved.
 - [ ] An **end frame** (`end_image_url`) for shots with a big pose change, to stop drift mid-action.

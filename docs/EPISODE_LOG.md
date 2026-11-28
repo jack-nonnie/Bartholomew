@@ -4,6 +4,33 @@ One entry per episode, newest first. Record what was made, what it cost, what th
 
 ---
 
+## Ep 2: Gym Day (2026-11-25)
+**Video:** `videos/bartholomew_gym_day.mp4` (23.6s, 1080×1920, Kling native sound effects + workout-montage music)
+**Approved keyframes + final script:** `episodes/assets/gym_day/`
+**Outfit:** a red terry sweatband and red wristbands, which stayed on in every clip.
+
+**Shots (all 5s)**
+| # | Shot | Keyframe pick | Notes |
+|---|---|---|---|
+| 1 | Warm-up: toe touch, topple, pop back up | v2 (B) | Kling turned the topple into a goofy airborne tumble. Kept. |
+| 2 | Big lift: gummy-bear barbell, red gummy slides off, he topples | v1 (A) | The user's gag idea (gummy bears as weights). Came out exactly as scripted. |
+| 3 | Treadmill: legs blur, face-plant onto the mat, grin | v1 (A) | He flew over the front instead of off the back. Reads well. Also used for the Flash test. |
+| 4 | Jump rope: rope wraps him like a parcel | v1 (A) | Excellent. The detailed wrap description worked. |
+| 5 | Tuckered out: sleepy personality, naps hugging the red gummy (callback) | v1 (A) | Take 1 only closed his eyes. Take 2, with detailed motion + static camera, tipped him onto the bench asleep. |
+
+**Spend:** about $6.33 over 18 calls: keyframes $0.90, 5 clips $3.92, one shot 5 re-roll $0.79, Flash test $0.47, music $0.25. Without the test and the re-roll it would have been about $5.07.
+
+**Code changes:** per-episode `music.mood`, per-shot `personality:`, a new `personalities/sleepy.yaml`, a no-giggle line in the video prompt, "giggling" removed from playful, and Kling Flash `native_audio: true`.
+
+**User verdict:** "the videos came back great". They want **more detail in the video-model descriptions** from now on, which is now in the template, skill and LESSONS. Spa Day feedback recorded: too much giggling, which is fixed. Kling Flash: no decision yet.
+
+**Do differently next time**
+- Write every `motion:` as rich step-by-step detail from the start: start, movement, end position, expression, timing.
+- Use a static camera for body-movement beats, since the push-in hid the tip-over.
+- Ask the user about Kling Flash before Ep 3. It would save about $1.60 per episode.
+
+---
+
 ## Ep 1: Spa Day (2026-11-21), pilot
 **Video:** `videos/bartholomew_spa_day.mp4` (23.6s, 1080×1920, Kling native sound effects + music)
 **Approved keyframes + final script:** `episodes/assets/spa_day/` (reusable as extra bear references)
@@ -27,7 +54,7 @@ One entry per episode, newest first. Record what was made, what it cost, what th
 **Spend:** about $13.80 estimated, with 45 paid calls. That covers the style exploration (about $1.90 in images), the 3-model bake-off (about $8.40) and production (about $3.40 video, $0.54 keyframes, $0.25 music).
 **Expected cost of a normal episode now:** about $5 (10 keyframes $0.90 + 5 clips $3.95 + music $0.25).
 
-**User verdict:** happy with the final video and asked to set up for the next episode. (Ask for specific feedback at the start of the next session and record it here.)
+**User verdict:** happy with the final video. Feedback given later: the giggling was overdone, a little is fine (fixed in Ep 2).
 
 **Do differently next time**
 - Write literal poses and a `continuity:` line for every shot from the start (now in the template).
