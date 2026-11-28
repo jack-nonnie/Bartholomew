@@ -142,5 +142,29 @@
     "seconds": 5.5,
     "cache_key": "be66d024935e792a2c84",
     "at": "2026-11-28 19:33:19"
+  },
+  {
+    "label": "keyframe s2_stepping_stones v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 26.6,
+    "cache_key": "60905c485fd392ba0a00",
+    "at": "2026-11-28 19:45:08"
+  },
+  {
+    "label": "keyframe s2_stepping_stones v2",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 17.4,
+    "cache_key": "9e9f8a942a27edd586c1",
+    "at": "2026-11-28 19:45:26"
+  },
+  {
+    "label": "clip s2_stepping_stones (kling_v4)",
+    "endpoint": "kling/v4/image-to-video",
+    "est_cost": 0.785,
+    "seconds": 341.6,
+    "cache_key": "8bb430514bd39363bddc",
+    "at": "2026-11-28 19:52:56"
   }
 ]

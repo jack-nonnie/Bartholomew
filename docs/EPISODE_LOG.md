@@ -13,12 +13,12 @@ One entry per episode, newest first. Record what was made, what it cost, what th
 | # | Shot | Length | Keyframe pick | Notes |
 |---|---|---|---|---|
 | 1 | Trailhead: waves, marches off up the trail | 3s | v2 (B) | Shortened at the user's request to make room for s3. Fine. |
-| 2 | Stepping stones: stone tips, splash into stream | 5s | v2 (B) | **User: the toppling stone animation was poor.** No wobbly stone was set up in the keyframe, so a stone flipped up from nowhere and he leapt rather than being tipped. Hat flew off and landed back on (a nice accident). |
+| 2 | Stepping stones: stone tips, splash into stream | 5s | v2 (B) | **User: the toppling stone animation was poor.** No wobbly stone was set up in the keyframe, so a stone flipped up from nowhere and he leapt rather than being tipped. Hat flew off and landed back on. **Take 2 (redo, keyframe A):** a big domed stone already tilted in the keyframe + seesaw cause→effect motion + one event. The stone rocks forward, he slides off its edge and splashes down. Clear and fixed. |
 | 3 | Pinecone bonk: catch, then a pinecone avalanche buries him | 7s | v2 (B) | The user asked for the gag to be expanded and lengthened. Came out great: buried, then pops up with a pinecone on his hat. |
 | 4 | Steep hill: slips and slides down, daisy on hat | 5s | v1 (A) | He slid rather than curling into a ball and rolling. Still reads. |
 | 5 | Summit: plants flag on a mountain peak, eats honey from the jar | 5s | new v1 | The user asked for a redo so it clearly looks like a mountaintop with drop-offs, and for straight honey instead of a sandwich. The pointed-rock peak worked. |
 
-**Spend:** about $5.25 logged (keyframes $1.08 over 12 images, clips $3.92, music $0.25), plus possibly about $0.79 for an s4 render lost when the background job hit its 30-minute limit. fal ran out of credit twice mid-batch; the user topped up.
+**Spend:** about $6.22 logged (keyframes $1.26 over 14 images, clips $4.71 including the s2 redo, music $0.25), plus possibly about $0.79 for an s4 render lost when the background job hit its 30-minute limit. fal ran out of credit twice mid-batch; the user topped up.
 
 **Code changes:** `review clips` now samples by percentage of each clip (it silently failed on 3s clips), the double period in video prompts is fixed, and the template has new guidance on physical gags and variable shot lengths.
 

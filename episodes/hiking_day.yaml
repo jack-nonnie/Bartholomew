@@ -37,6 +37,7 @@ shots:
     sfx: birdsong, a light breeze, crunchy little footsteps on the dirt path, the backpack softly jostling
   - id: s2_stepping_stones
     duration: 5
+    lock_clip: true
     keyframe_pick: 1                  # take 2: user picked A (2026-11-28)
     beat: Stepping stones
     # take 2: the cause of the fall (one wobbly stone) is set up in the keyframe; one physical event
