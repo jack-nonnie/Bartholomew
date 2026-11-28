@@ -37,26 +37,31 @@ shots:
     sfx: birdsong, a light breeze, crunchy little footsteps on the dirt path, the backpack softly jostling
   - id: s2_stepping_stones
     duration: 5
-    lock_clip: true
-    keyframe_pick: 2
     beat: Stepping stones
+    # take 2: the cause of the fall (one wobbly stone) is set up in the keyframe; one physical event
     keyframe: >-
-      {name} wearing the mustard-yellow bucket hat and red backpack, balancing
-      on one flat grey stepping stone in the middle of a shallow sparkling
-      stream, arms stretched out to his sides for balance, one foot lifted
-      toward the next stone, concentrating with his tongue poking out, his fur
-      completely dry and NOT yet in the water
+      {name} wearing the mustard-yellow bucket hat and red backpack, standing
+      on ONE big round grey stepping stone that sits half out of the water in
+      the middle of a shallow, clear, sparkling stream, seen from the side; the
+      stone is rounded like a dome and already tilted slightly forward, with a
+      little gap of water under its front edge; his arms are stretched out
+      wide to his sides for balance, knees bent, eyes wide and nervous,
+      concentrating; his fur is completely dry and he is NOT yet falling or in
+      the water; flat stones lie behind him on the bank he came from
     motion: >-
-      {name} hops onto the next stepping stone and wobbles, windmilling his
-      arms, then steadies himself and gives a proud little smile. He hops to the
-      last stone, but it tips under his foot, and within the first three
-      seconds he slides off and plops bottom-first into the shallow stream with
-      a big splash, sitting in water up to his tummy. Water drips from the brim
-      of his hat; he blinks, looks down at the water, then looks up at the
-      camera with a sheepish, soggy grin.
-    camera: static medium shot, eye level, side view, the stones and stream in frame
-    continuity: the mustard-yellow bucket hat and red backpack stay on him; the stream stays shallow and clear; there are exactly three stepping stones
-    sfx: babbling stream, little hops on stone, a stone clunk, one big splash, water dripping
+      {name} holds his balance on the round stone for a moment, arms wide.
+      Then, within the first two seconds, the round stone slowly rocks forward
+      under his weight like a seesaw; he windmills both arms faster and faster
+      and leans back, but his feet slide down the stone's sloping front edge.
+      He slips off the front of the stone and sits down bottom-first in the
+      shallow water with a big splash, landing right beside the stone, water up
+      to his tummy. The stone rocks back and settles in the same place; it
+      stays a big grey stone the whole time. For the last two seconds he sits in
+      the water, water dripping from the brim of his hat, blinks, looks down at
+      the water, then looks up at the camera with a sheepish, soggy grin.
+    camera: static medium shot from the side, eye level, the stone, the bear and the water around him all in frame
+    continuity: the mustard-yellow bucket hat and red backpack stay on him; there is exactly one round stone and it never leaves the water or flips over, it only rocks forward and back; the stream stays shallow and clear
+    sfx: babbling stream, a low stony rocking clunk, a surprised little "whoa", one big splash, water dripping
   - id: s3_pinecone_bonk
     duration: 7                       # user: longer, gives the 3-part gag room
     lock_clip: true
