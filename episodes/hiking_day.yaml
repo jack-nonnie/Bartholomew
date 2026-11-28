@@ -63,15 +63,20 @@ shots:
       mouth, both paws empty at his sides; a few brown pinecones hang in the
       branches above him, NONE of them falling yet
     motion: >-
-      One brown pinecone drops from the branches and bonks {name} right on top
-      of his bucket hat, squashing the hat down over his eyes for a moment; he
-      wobbles, then pushes the hat back up with one paw, blinking in surprise.
-      A second pinecone falls, and this time he lunges sideways and catches it
-      in both paws with a triumphant stretch. He holds the pinecone up proudly
-      toward the camera with a huge delighted grin, then tucks it under his arm.
-    camera: static medium shot, slight low angle, the tree branches and the bear in frame
-    continuity: the mustard-yellow bucket hat stays on his head (only pushed down and back up) and the red backpack stays on; the pinecones stay brown
-    sfx: rustling branches, a soft hollow bonk, a surprised "hmph", a little catch thump, birdsong
+      Within the first second, one brown pinecone drops from the branches and
+      bonks {name} right on top of his bucket hat, squashing the hat down over
+      his eyes; he wobbles, pushes the hat back up with one paw and blinks in
+      surprise. A second pinecone falls and he lunges sideways and catches it in
+      both paws, then holds it up toward the camera with a smug, triumphant grin.
+      Behind his back the whole branch shakes and, around the three-second mark,
+      a big shower of dozens of pinecones pours down on him all at once,
+      burying him in a tall heap of brown pinecones right up to his chin. For
+      the last second only his head pokes out of the pile, one pinecone sitting
+      on top of his bucket hat, and he gives the camera a flat, unimpressed
+      look, then breaks into a sheepish grin.
+    camera: static medium shot, slight low angle, the tree branches and the bear and the ground around him in frame
+    continuity: the mustard-yellow bucket hat stays on his head (only pushed down and back up) and the red backpack stays on; the pinecones stay brown and are ordinary pine cone sized; the pile buries him only up to his chin, his face always visible
+    sfx: rustling branches, a soft hollow bonk, a surprised "hmph", a little catch thump, then a loud clattering rumble of many pinecones tumbling down, birdsong
   - id: s4_steep_hill
     duration: 5
     beat: Steep hill
@@ -105,12 +110,15 @@ shots:
       grass at the top of the hill with both paws. He steps back, plants his
       fists on his hips and puffs out his chest in a proud hero pose while a
       warm breeze makes the flag flutter. Then he flops down to sit beside the
-      flag, legs stretched out in front of him, pulls a small honey sandwich
-      from his backpack, takes a big happy bite, and gazes out at the view with
-      a contented smile.
+      flag, legs stretched out in front of him, pulls a small round glass jar
+      of golden honey with no label out of his backpack and pops off the lid.
+      He dips one paw deep into the jar, scoops out a big gooey dollop of honey
+      that drips in long golden strings, licks it off his paw with eyes closed
+      in bliss, then hugs the honey jar and gazes out at the view with a sticky,
+      contented smile.
     camera: static medium-wide shot from slightly behind and to the side, the bear, flag and view in frame
-    continuity: the mustard-yellow bucket hat and red backpack stay on; the flag stays plain pastel pink with no writing or symbols
-    sfx: warm wind, flag fluttering, a soft thunk as the flag is planted, a happy sigh, distant birds
+    continuity: the mustard-yellow bucket hat and red backpack stay on; the flag stays plain pastel pink with no writing or symbols; the honey jar is plain clear glass with no label or writing
+    sfx: warm wind, flag fluttering, a soft thunk as the flag is planted, a jar lid pop, a sticky slurp, a happy sigh, distant birds
 
 music:
   duration: 25
