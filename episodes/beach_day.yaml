@@ -4,7 +4,7 @@ image_model: nano_banana_21          # LOCKED
 video_model: kling_v4                # LOCKED (user chose standard over Flash for this episode, 2026-11-28)
 personality: playful
 
-approved: false                      # GATE 1: set true ONLY after the user approves the script + prompts
+approved: true                       # script approved 2026-11-28
 keyframes_approved: false            # GATE 2: set true ONLY after the user picks keyframes
 
 # OUTFIT (same in every shot, user request): red-and-white striped swim trunks,
