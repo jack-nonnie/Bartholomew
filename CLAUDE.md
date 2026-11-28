@@ -33,7 +33,7 @@ Short AI-generated videos of **Bartholomew**, the user's girlfriend's real Jelly
 - This repo has a SessionStart hook that installs `requirements.txt`.
 
 ## Working rules
-- **Commit and push after every meaningful step** (a stop hook checks this). **Commit as the user, not as Claude:** at session start run `git config user.name "jack-nonnie"` and set `user.email` to the user's account email (the cloud session defaults to "Claude"). Keep the `Co-Authored-By: Claude` trailer. Remote: `https://github.com/jack-nonnie/Bartholomew.git`.
+- **Commit and push after every meaningful step** (a stop hook checks this). **Commit as the user, not as Claude:** at session start run `git config user.name "jack-nonnie"` and set `user.email` to the user's account email (the cloud session defaults to "Claude"; since 2026-11-28 the Default environment also sets `GIT_AUTHOR_*`/`GIT_COMMITTER_*` to the user, so check `git log -1 --format="%an"` and only fix it if needed). Keep the `Co-Authored-By: Claude` trailer. Remote: `https://github.com/jack-nonnie/Bartholomew.git`.
 - Run renders in the background; the session is notified when they finish. Tell the user they don't need to prompt again.
 - **Look at every image or contact sheet yourself before sending it** (`studio.cli review keyframes|clips`). You can't hear audio, so check levels with `volumedetect` and ask the user to listen.
 - Check fal's live catalog and prices before adding or switching any model. Memory of model versions goes stale.
