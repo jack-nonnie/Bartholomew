@@ -1,0 +1,117 @@
+title: Hiking Day
+style: film3d_bear_storybook_world   # LOCKED series look
+image_model: nano_banana_21          # LOCKED
+video_model: kling_v4                # LOCKED
+personality: playful
+
+approved: false                      # GATE 1
+keyframes_approved: false            # GATE 2
+
+setting: >-
+  a sunny storybook hiking trail through rolling green hills, with a winding
+  dirt path, wildflowers, tall round pine trees, a little sparkling stream with
+  flat stepping stones, and soft blue mountains in the distance
+
+shots:
+  - id: s1_trailhead
+    duration: 5
+    beat: Trailhead
+    keyframe: >-
+      {name} wearing a small mustard-yellow bucket hat and a little red
+      backpack with both straps over his shoulders, standing at the start of a
+      dirt trail beside a small wooden trail post with no writing on it, both
+      paws gripping his backpack straps, chest puffed out and an excited,
+      determined grin, standing still and NOT yet walking
+    motion: >-
+      {name} takes one big excited breath, puffing his chest out even more, and
+      gives a firm little nod at the camera. Within the first two seconds he
+      turns to face along the trail and starts marching away from the post with
+      big exaggerated proud steps, knees lifting high and both arms swinging
+      back and forth, the red backpack bouncing on his back with each step. After
+      a few steps he glances back over his shoulder at the camera with a big
+      cheeky grin and keeps marching up the path.
+    camera: static medium-wide shot, eye level, the trail and the post in frame
+    continuity: the mustard-yellow bucket hat stays on his head and the red backpack stays on his back the whole time, keeping their colors
+    sfx: birdsong, a light breeze, crunchy little footsteps on the dirt path, the backpack softly jostling
+  - id: s2_stepping_stones
+    duration: 5
+    beat: Stepping stones
+    keyframe: >-
+      {name} wearing the mustard-yellow bucket hat and red backpack, balancing
+      on one flat grey stepping stone in the middle of a shallow sparkling
+      stream, arms stretched out to his sides for balance, one foot lifted
+      toward the next stone, concentrating with his tongue poking out, his fur
+      completely dry and NOT yet in the water
+    motion: >-
+      {name} hops onto the next stepping stone and wobbles, windmilling his
+      arms, then steadies himself and gives a proud little smile. He hops to the
+      last stone, but it tips under his foot, and within the first three
+      seconds he slides off and plops bottom-first into the shallow stream with
+      a big splash, sitting in water up to his tummy. Water drips from the brim
+      of his hat; he blinks, looks down at the water, then looks up at the
+      camera with a sheepish, soggy grin.
+    camera: static medium shot, eye level, side view, the stones and stream in frame
+    continuity: the mustard-yellow bucket hat and red backpack stay on him; the stream stays shallow and clear; there are exactly three stepping stones
+    sfx: babbling stream, little hops on stone, a stone clunk, one big splash, water dripping
+  - id: s3_pinecone_bonk
+    duration: 5
+    beat: Pinecone bonk
+    keyframe: >-
+      {name} wearing the mustard-yellow bucket hat and red backpack, standing
+      on the dirt path under a tall round pine tree, head tilted way back
+      looking up into the branches with wide curious eyes and a little open
+      mouth, both paws empty at his sides; a few brown pinecones hang in the
+      branches above him, NONE of them falling yet
+    motion: >-
+      One brown pinecone drops from the branches and bonks {name} right on top
+      of his bucket hat, squashing the hat down over his eyes for a moment; he
+      wobbles, then pushes the hat back up with one paw, blinking in surprise.
+      A second pinecone falls, and this time he lunges sideways and catches it
+      in both paws with a triumphant stretch. He holds the pinecone up proudly
+      toward the camera with a huge delighted grin, then tucks it under his arm.
+    camera: static medium shot, slight low angle, the tree branches and the bear in frame
+    continuity: the mustard-yellow bucket hat stays on his head (only pushed down and back up) and the red backpack stays on; the pinecones stay brown
+    sfx: rustling branches, a soft hollow bonk, a surprised "hmph", a little catch thump, birdsong
+  - id: s4_steep_hill
+    duration: 5
+    beat: Steep hill
+    keyframe: >-
+      {name} wearing the mustard-yellow bucket hat and red backpack, halfway up
+      a steep grassy hillside, leaning far forward and climbing on all fours
+      with paws and feet in the grass, determined puffed-cheek face, the top of
+      the hill above him, NOT yet slipping
+    motion: >-
+      {name} huffs and puffs and crawls a little higher up the steep grass,
+      then his feet slip out from under him. He slides backward down the slope
+      on his tummy, then curls into a round furry ball and rolls all the way to
+      the bottom of the hill, his hat and backpack staying on as he tumbles. He lands
+      sitting up in a soft patch of wildflowers at the bottom, a daisy stuck on
+      his hat, blinks dizzily, then shakes his head, gives a little
+      determined huff and stares back up the hill with a stubborn frown.
+    camera: static wide side view, the whole hillside from top to bottom in frame
+    continuity: the mustard-yellow bucket hat and red backpack stay on him the whole time, even while rolling
+    sfx: huffing breaths, grass swishing, a whoosh as he slides, soft tumbling thumps, a gentle flump into flowers
+  - id: s5_summit
+    duration: 5
+    beat: Summit
+    keyframe: >-
+      {name} wearing the mustard-yellow bucket hat and red backpack, standing
+      on a grassy hilltop summit with a sweeping view of soft blue mountains
+      and a golden sunset sky behind him, holding a small plain pastel-pink
+      triangle flag on a wooden stick upright in one paw, out of breath but
+      smiling, the flag NOT yet planted
+    motion: >-
+      {name} raises the little pink flag high and plants it firmly into the
+      grass at the top of the hill with both paws. He steps back, plants his
+      fists on his hips and puffs out his chest in a proud hero pose while a
+      warm breeze makes the flag flutter. Then he flops down to sit beside the
+      flag, legs stretched out in front of him, pulls a small honey sandwich
+      from his backpack, takes a big happy bite, and gazes out at the view with
+      a contented smile.
+    camera: static medium-wide shot from slightly behind and to the side, the bear, flag and view in frame
+    continuity: the mustard-yellow bucket hat and red backpack stay on; the flag stays plain pastel pink with no writing or symbols
+    sfx: warm wind, flag fluttering, a soft thunk as the flag is planted, a happy sigh, distant birds
+
+music:
+  duration: 25
+  mood: cheerful adventurous hiking music with bouncy acoustic guitar, whistling-style flute melody, light hand percussion and pizzicato strings, building to a warm triumphant ending
