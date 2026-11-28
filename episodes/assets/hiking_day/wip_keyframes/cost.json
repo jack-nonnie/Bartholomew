@@ -1,0 +1,42 @@
+[
+  {
+    "label": "keyframe s1_trailhead v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 25.3,
+    "cache_key": "8ad895bbf12d3872955a",
+    "at": "2026-11-28 18:33:21"
+  },
+  {
+    "label": "keyframe s1_trailhead v2",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 17.6,
+    "cache_key": "7c8035219d49478fbec0",
+    "at": "2026-11-28 18:33:41"
+  },
+  {
+    "label": "keyframe s2_stepping_stones v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 14.8,
+    "cache_key": "c908086db3d4f3b0285e",
+    "at": "2026-11-28 18:33:56"
+  },
+  {
+    "label": "keyframe s2_stepping_stones v2",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 18.6,
+    "cache_key": "a62423a6a848c15736ef",
+    "at": "2026-11-28 18:34:15"
+  },
+  {
+    "label": "keyframe s3_pinecone_bonk v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 21.0,
+    "cache_key": "4f242a133b763128fb14",
+    "at": "2026-11-28 18:34:37"
+  }
+]
