@@ -1,0 +1,126 @@
+title: Beach Day
+style: film3d_bear_storybook_world   # LOCKED series look
+image_model: nano_banana_21          # LOCKED
+video_model: kling_v4                # LOCKED
+personality: playful
+
+approved: false                      # GATE 1: set true ONLY after the user approves the script + prompts
+keyframes_approved: false            # GATE 2: set true ONLY after the user picks keyframes
+
+setting: >-
+  a sunny storybook seaside beach with soft golden sand, pastel beach huts,
+  striped beach umbrellas, little seashells, gentle turquoise waves and a
+  bright blue sky with puffy white clouds
+
+shots:
+  - id: s1_hot_sand
+    duration: 3
+    beat: Hot sand
+    keyframe: >-
+      {name} wearing a small round straw sun hat with a pink ribbon, standing
+      at the edge of a wooden boardwalk where it meets the golden sand, a
+      rolled-up blue-and-white striped beach towel tucked under one arm, one
+      bare foot lifted and just about to step onto the sand, beaming excited
+      grin, the beach and the sea behind him, NOT yet on the sand
+    motion: >-
+      {name} steps off the boardwalk onto the sand with a happy grin. Within
+      the first second his eyes pop wide and his cheeks puff out as the sand is
+      scorching hot. He hops quickly from one foot to the other, knees high,
+      the rolled towel bouncing under his arm, then sprints away across the
+      sand in fast little tiptoe steps toward the sea, glancing back at the
+      camera with a pained, wide-eyed "ouch ouch" grimace.
+    camera: static medium-wide shot, eye level, the boardwalk edge and the sand in frame
+    continuity: the straw sun hat with the pink ribbon stays on his head and the striped towel stays rolled under his arm, keeping their colors
+    sfx: seagulls, gentle waves, quick soft sandy footsteps, a little surprised "hoo-hoo"
+  - id: s2_sandcastle
+    duration: 5
+    beat: Sandcastle
+    # physical gag: the cause (the incoming wave) is visible in the keyframe
+    keyframe: >-
+      {name} wearing the straw sun hat with the pink ribbon, kneeling on wet
+      sand beside a tall finished sandcastle with three round towers that is as
+      tall as he is, a small red plastic bucket and spade next to him, patting
+      the top of the tallest tower with one paw and grinning proudly at the
+      camera; behind the sandcastle the sea is close, and one foamy wave is
+      already rolling in toward the castle, NOT yet reaching it; his fur is
+      completely dry
+    motion: >-
+      {name} gives the top of the tallest tower one last proud pat and turns to
+      the camera with a big pleased grin, paws spread like "ta-da". Around the
+      two-second mark the foamy wave rushes up the sand behind him, swirls
+      around the castle and around him up to his tummy, and the whole sandcastle
+      slumps and melts down into a flat smooth lump of wet sand. The water slides
+      back out to sea. For the last two seconds he sits there soaked from the
+      tummy down, water dripping from his hat brim, holding the little red spade,
+      stares at the flat lump where the castle was, then looks at the camera with
+      a flat, unimpressed pout.
+    camera: static medium shot, eye level, the bear, the whole sandcastle and the incoming wave in frame
+    continuity: the straw sun hat with the pink ribbon stays on his head; the bucket stays red; there is only one sandcastle and it only melts down, it never moves or floats away
+    sfx: waves, a big rushing whoosh of a wave, fizzing foam, a soft sandy slump, water dripping, seagulls
+  - id: s3_crab_pinch
+    duration: 5
+    beat: Crab pinch
+    keyframe: >-
+      {name} wearing the straw sun hat with the pink ribbon, lying on his back
+      on the blue-and-white striped beach towel under a pastel striped beach
+      umbrella, paws behind his head, eyes closed, a blissful relaxed smile,
+      sunbathing; one small bright red crab sits on the sand right beside his
+      bare feet, claws raised, NOT yet touching him
+    motion: >-
+      {name} lies sunbathing with a blissful smile. Within the first two
+      seconds the little red crab scuttles sideways onto the towel and clamps
+      one claw onto his big toe. His eyes snap open wide and he springs
+      straight up onto his feet, hopping on one leg while holding the other foot
+      up with the crab dangling from his toe. He shakes his foot hard and the crab
+      lets go, drops onto the sand and scuttles away sideways. For the last
+      second he clutches his toe, then glares after the crab with a grumpy,
+      puffed-cheek pout.
+    camera: static medium-wide shot, eye level, the whole towel, the umbrella and the crab in frame
+    continuity: the straw sun hat with the pink ribbon stays on his head; there is exactly one small red crab, it stays crab sized; the towel stays blue-and-white striped
+    sfx: gentle waves, tiny clicking crab claws, a squeaky "eep!", soft thumping hops on sand, seagulls
+  - id: s4_beach_ball
+    duration: 5
+    beat: Beach ball
+    # physical gag: the umbrella pole the ball bounces off is in the keyframe
+    keyframe: >-
+      {name} wearing the straw sun hat with the pink ribbon, standing on the sand
+      with one leg pulled back ready to kick, a big round beach ball with
+      rainbow-colored stripes sitting on the sand right in front of his foot,
+      a confident cheeky grin; a few steps in front of him stands a pastel
+      striped beach umbrella planted in the sand; he has NOT kicked the ball yet
+    motion: >-
+      {name} swings his leg and gives the big striped beach ball a mighty kick.
+      The ball flies forward, bounces off the umbrella's pole with a boing, and
+      shoots straight back at him. Around the two-second mark it bonks him right
+      on the tummy and knocks him over backward, flat onto his back in the sand,
+      arms and legs splayed out like a starfish, his hat tipping over his eyes.
+      The beach ball bounces gently twice and rolls to a stop beside him. For the
+      last second he pushes his hat back up with one paw and blinks up at the sky
+      with a dazed, sheepish grin.
+    camera: static wide side view, the bear, the ball and the umbrella all in frame
+    continuity: the straw sun hat with the pink ribbon stays on his head (only tipped over his eyes and pushed back); there is exactly one beach ball and it keeps its rainbow stripes; the umbrella stays planted and does not fall
+    sfx: a thwump kick, a rubbery boing off the pole, a soft bonk and an "oof", a sandy flump, waves, seagulls
+  - id: s5_ice_cream
+    duration: 5
+    beat: Ice cream
+    keyframe: >-
+      {name} wearing the straw sun hat with the pink ribbon, sitting on the
+      blue-and-white striped towel on the sand at golden sunset, the sea glowing
+      orange and pink behind him, holding up a waffle cone with one big round
+      scoop of golden honey ice cream in both paws, eyes wide and delighted,
+      mouth open about to take a lick, the scoop still firmly on the cone
+    motion: >-
+      {name} takes one long happy lick of the golden ice cream with his eyes
+      closed in bliss. Within the next two seconds the scoop wobbles, slides off
+      the top of the cone and plops down right onto his nose and tummy. He freezes
+      and looks cross-eyed at the blob on his nose, then shrugs, scoops it up with
+      one paw and licks it off happily. For the last second he leans back on one
+      paw, sticky and content, and gazes out at the glowing sunset sea with a big
+      satisfied smile.
+    camera: slow gentle push-in, eye level, the bear, the cone and the sunset sea in frame
+    continuity: the straw sun hat with the pink ribbon stays on his head; the cone is a plain waffle cone and the ice cream stays golden; the towel stays blue-and-white striped
+    sfx: soft evening waves, a slurpy lick, a gentle wet plop, a happy sigh, distant seagulls
+
+music:
+  duration: 23
+  mood: sunny breezy beach music with ukulele, steel drums, bouncy marimba and light hand percussion, relaxing into a warm mellow sunset ending
