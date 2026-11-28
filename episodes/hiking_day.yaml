@@ -15,6 +15,7 @@ setting: >-
 shots:
   - id: s1_trailhead
     duration: 3                       # user: shorter so the pinecone gag gets more time
+    keyframe_pick: 2
     beat: Trailhead
     keyframe: >-
       {name} wearing a small mustard-yellow bucket hat and a little red
@@ -35,6 +36,7 @@ shots:
     sfx: birdsong, a light breeze, crunchy little footsteps on the dirt path, the backpack softly jostling
   - id: s2_stepping_stones
     duration: 5
+    keyframe_pick: 2
     beat: Stepping stones
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, balancing
@@ -55,6 +57,7 @@ shots:
     sfx: babbling stream, little hops on stone, a stone clunk, one big splash, water dripping
   - id: s3_pinecone_bonk
     duration: 7                       # user: longer, gives the 3-part gag room
+    keyframe_pick: 2
     beat: Pinecone bonk
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, standing
@@ -80,6 +83,7 @@ shots:
     sfx: rustling branches, a soft hollow bonk, a surprised "hmph", a little catch thump, then a loud clattering rumble of many pinecones tumbling down, birdsong
   - id: s4_steep_hill
     duration: 5
+    keyframe_pick: 1
     beat: Steep hill
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, halfway up
@@ -102,22 +106,27 @@ shots:
     beat: Summit
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, standing
-      on a grassy hilltop summit with a sweeping view of soft blue mountains
-      and a golden sunset sky behind him, holding a small plain pastel-pink
-      triangle flag on a wooden stick upright in one paw, out of breath but
-      smiling, the flag NOT yet planted
+      on the tiny pointed rocky peak at the very top of a tall mountain, a
+      small patch of grass just big enough for his feet; on both his left and
+      right the mountainside drops away steeply into a deep valley far below,
+      with soft clouds drifting BELOW the peak and a sea of smaller blue
+      mountain tops stretching into the distance under a golden sunset sky;
+      the camera looks slightly down and across so the long drop on both sides
+      is clearly visible; he holds a small plain pastel-pink triangle flag on a
+      wooden stick upright in one paw, out of breath but smiling, the flag NOT
+      yet planted
     motion: >-
       {name} raises the little pink flag high and plants it firmly into the
       grass at the top of the hill with both paws. He steps back, plants his
       fists on his hips and puffs out his chest in a proud hero pose while a
       warm breeze makes the flag flutter. Then he flops down to sit beside the
-      flag, legs stretched out in front of him, pulls a small round glass jar
+      flag on the tiny peak, legs stretched out in front of him, pulls a small round glass jar
       of golden honey with no label out of his backpack and pops off the lid.
       He dips one paw deep into the jar, scoops out a big gooey dollop of honey
       that drips in long golden strings, licks it off his paw with eyes closed
       in bliss, then hugs the honey jar and gazes out at the view with a sticky,
       contented smile.
-    camera: static medium-wide shot from slightly behind and to the side, the bear, flag and view in frame
+    camera: static wide shot, slightly high angle, the bear small on the pointed peak with the steep drop and clouds below on both sides in frame
     continuity: the mustard-yellow bucket hat and red backpack stay on; the flag stays plain pastel pink with no writing or symbols; the honey jar is plain clear glass with no label or writing
     sfx: warm wind, flag fluttering, a soft thunk as the flag is planted, a jar lid pop, a sticky slurp, a happy sigh, distant birds
 
