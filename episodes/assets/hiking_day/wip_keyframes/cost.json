@@ -38,5 +38,53 @@
     "seconds": 21.0,
     "cache_key": "4f242a133b763128fb14",
     "at": "2026-11-28 18:34:37"
+  },
+  {
+    "label": "keyframe s3_pinecone_bonk v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 23.2,
+    "cache_key": "9b40d18f1885513d9c87",
+    "at": "2026-11-28 18:40:45"
+  },
+  {
+    "label": "keyframe s3_pinecone_bonk v2",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 25.0,
+    "cache_key": "1f7c587b628b9b9b994f",
+    "at": "2026-11-28 18:41:10"
+  },
+  {
+    "label": "keyframe s4_steep_hill v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 24.8,
+    "cache_key": "dec8c3b2d8a10bf13240",
+    "at": "2026-11-28 18:41:36"
+  },
+  {
+    "label": "keyframe s4_steep_hill v2",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 16.9,
+    "cache_key": "7f400d9e0337dc9c296b",
+    "at": "2026-11-28 18:41:53"
+  },
+  {
+    "label": "keyframe s5_summit v1",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 33.0,
+    "cache_key": "284886bcf8f0e0ab9229",
+    "at": "2026-11-28 18:42:27"
+  },
+  {
+    "label": "keyframe s5_summit v2",
+    "endpoint": "google/nano-banana-2.1/edit",
+    "est_cost": 0.09,
+    "seconds": 14.2,
+    "cache_key": "70544e222cc6378ab8ff",
+    "at": "2026-11-28 18:42:41"
   }
 ]

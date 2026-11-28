@@ -58,10 +58,11 @@ shots:
     beat: Pinecone bonk
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, standing
-      on the dirt path under a tall round pine tree, head tilted way back
-      looking up into the branches with wide curious eyes and a little open
-      mouth, both paws empty at his sides; a few brown pinecones hang in the
-      branches above him, NONE of them falling yet
+      on the dirt path directly underneath a tall pine tree whose branches hang
+      right above his head, his whole head tipped far back so his face points
+      straight UP at the branches, chin raised high, wide curious eyes and a
+      little open mouth, both paws empty at his sides; a cluster of brown
+      pinecones hangs in the branches right above him, NONE of them falling yet
     motion: >-
       Within the first two seconds, one brown pinecone drops from the branches and
       bonks {name} right on top of his bucket hat, squashing the hat down over
