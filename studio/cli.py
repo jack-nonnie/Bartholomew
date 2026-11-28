@@ -88,8 +88,9 @@ def review_keyframes(ep_name: str) -> Path:
     return out
 
 
-def review_clips(ep_name: str, times=(0.3, 1.5, 2.7, 3.9, 4.9)) -> Path:
-    """Contact sheet: one row per shot, 5 frames across its duration. Use it to spot drift."""
+def review_clips(ep_name: str, fracs=(0.06, 0.3, 0.54, 0.78, 0.97)) -> Path:
+    """Contact sheet: one row per shot, 5 frames spread across each clip's own duration
+    (works for any clip length, e.g. 3s or 7s shots). Use it to spot drift."""
     ep = config.episode(ep_name)
     cdir = config.ROOT / pipeline.default_dirs(ep_name)["clips"]
     clips = [cdir / f"{s['id']}.mp4" for s in ep["shots"] if (cdir / f"{s['id']}.mp4").exists()]
@@ -98,8 +99,10 @@ def review_clips(ep_name: str, times=(0.3, 1.5, 2.7, 3.9, 4.9)) -> Path:
     inputs, f, rows, n = [], [], [], 0
     for r, c in enumerate(clips):
         cells = []
-        for t in times:
-            inputs += ["-ss", str(t), "-i", str(c)]
+        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                    "-of", "csv=p=0", str(c)], capture_output=True, text=True).stdout)
+        for fr in fracs:
+            inputs += ["-ss", f"{fr * dur:.2f}", "-i", str(c)]
             f.append(f"[{n}:v]scale=216:384,setsar=1[f{n}]")
             cells.append(f"[f{n}]")
             n += 1
@@ -109,7 +112,7 @@ def review_clips(ep_name: str, times=(0.3, 1.5, 2.7, 3.9, 4.9)) -> Path:
     out = config.out_dir(ep_name) / "review" / "clips_contact_sheet.png"
     out.parent.mkdir(parents=True, exist_ok=True)
     _ff([*inputs, "-frames:v", "1", "-filter_complex", ";".join(f), str(out)])
-    print("Rows = " + ", ".join(c.stem for c in clips) + f"; columns = t={list(times)}s")
+    print("Rows = " + ", ".join(c.stem for c in clips) + f"; columns = {[int(x * 100) for x in fracs]}% through each clip")
     return out
 
 

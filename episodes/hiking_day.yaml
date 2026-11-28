@@ -15,6 +15,7 @@ setting: >-
 shots:
   - id: s1_trailhead
     duration: 3                       # user: shorter so the pinecone gag gets more time
+    lock_clip: true
     keyframe_pick: 2
     beat: Trailhead
     keyframe: >-
@@ -36,6 +37,7 @@ shots:
     sfx: birdsong, a light breeze, crunchy little footsteps on the dirt path, the backpack softly jostling
   - id: s2_stepping_stones
     duration: 5
+    lock_clip: true
     keyframe_pick: 2
     beat: Stepping stones
     keyframe: >-
@@ -57,6 +59,7 @@ shots:
     sfx: babbling stream, little hops on stone, a stone clunk, one big splash, water dripping
   - id: s3_pinecone_bonk
     duration: 7                       # user: longer, gives the 3-part gag room
+    lock_clip: true
     keyframe_pick: 2
     beat: Pinecone bonk
     keyframe: >-
@@ -83,6 +86,7 @@ shots:
     sfx: rustling branches, a soft hollow bonk, a surprised "hmph", a little catch thump, then a loud clattering rumble of many pinecones tumbling down, birdsong
   - id: s4_steep_hill
     duration: 5
+    lock_clip: true
     keyframe_pick: 1
     beat: Steep hill
     keyframe: >-
@@ -103,6 +107,7 @@ shots:
     sfx: huffing breaths, grass swishing, a whoosh as he slides, soft tumbling thumps, a gentle flump into flowers
   - id: s5_summit
     duration: 5
+    lock_clip: true
     keyframe_pick: 1
     beat: Summit
     keyframe: >-
