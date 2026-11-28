@@ -36,11 +36,11 @@ def video_prompt(shot: dict, ep: dict, style_id: str | None = None) -> str:
     sty = config.style(style_id or ep["style"])
     per = config.personality(shot.get("personality") or ep["personality"])
     return (
-        f"{_fill(shot['motion'], char)}. "
+        f"{_fill(shot['motion'], char).rstrip('.')}. "
         f"Camera: {shot['camera']}. "
         f"Character performance: {per['motion']}; expressive face with {per['expressions']}. "
         f"Continuity: keep everything from the first frame; the same outfit and props stay on the whole time, "
-        f"same framing and size. {shot.get('continuity', '')} "
+        f"same framing and size. {shot.get('continuity', '').rstrip('.')}. "
         f"The bear keeps the same curly caramel fur and brown suede nose throughout; his eyes always stay tiny "
         f"glossy black beads, with no white eye whites and no cartoon eyes. "
         f"Sound: {shot.get('sfx', '')}. No voice, no speech, no giggling or laughing sounds "
