@@ -23,7 +23,7 @@ This is a living document. **Read it before starting any episode**, and **append
 - **GitHub repo creation:** this environment can't create repos. The user creates them, then `add_repo` attaches one. If a push is refused (403), the Claude GitHub App needs access to the repo (github.com/apps/claude/installations/select_target).
 - The remote must be `https://github.com/jack-nonnie/Bartholomew.git` (capital B), otherwise git prints a "repository moved" notice.
 - A stop hook insists on committing and pushing. **Commit and push after every meaningful step.**
-- **Run long jobs in the background** (video renders take about 3–7 minutes per clip). The session is notified when they finish, so the user doesn't need to prompt again. Tell them so.
+- **Run long jobs in the background** (video renders take about 3–7 minutes per clip). **Pass `timeout: 7200000`**: the default 30-minute background limit killed Hiking Day's render mid-clip, and fal probably still billed the lost clip. The session is notified when they finish, so the user doesn't need to prompt again. Tell them so.
 
 ## Model selection
 - **My memory of fal's model lineup is out of date. Check the live catalog every time** (see `.claude/skills/model-scout/SKILL.md`). On day one my config pointed at Kling 2.1, Veo 3 and Seedance 1, while Kling 4.0, Veo 3.1 and Seedance 2.5 were live.
@@ -50,6 +50,7 @@ This is a living document. **Read it before starting any episode**, and **append
 - Kling v4 parameters: `start_image_url`, `duration` (integer, 3–30), `resolution` (720p/1080p/4k), optional `end_image_url`/`multi_prompt`. **There's no negative-prompt field**, so anything that must not change goes in the positive prompt.
 - **One beat per 5s shot.** Kling plays "action + reaction" well, e.g. "takes a sip, grins at camera, flops back".
 - **Detailed motion text wins** (Gym Day, and the user's standing request). The rope wrap ("coils around his tummy, pins his arms, wrapped shoulders to knees in pink loops, handles dangling") and the treadmill face-plant came out exactly as written. The vague "slowly tips over and falls asleep" was ignored: he just closed his eyes. Rewriting it as "within the first two seconds, tips sideways until lying fully on his side along the bench, head on the bench… asleep for the rest of the shot", with a static camera, worked first try. *(built in: template + skill guidance)*
+- **Physical gags need a visible cause in the first frame** (Hiking Day stepping stones). The script said "the last stone tips under his foot", but no particular stone was set up in the keyframe, so Kling invented one: a stone flipped up out of the water from nowhere, he leapt instead of being tipped, and the cause and effect didn't read. Fixes: (1) put the prop that causes the gag **in the keyframe, named and placed** ("one round wobbly stone directly in front of him, already tilted slightly"); (2) describe the physics like a stage direction ("the stone rocks forward like a seesaw under his weight; he slides off its front edge; the stone stays where it is"); (3) **one physical event per 5s**: cut lead-in actions (the extra hop and wobble) so the gag gets the time; (4) for a must-land gag, consider an `end_image_url` frame. *(built in: template comment on `keyframe:` / `motion:`)*
 - **A push-in camera can swallow the action.** Use a static camera with "the whole bench in frame" when the beat is a body movement.
 - Kling sometimes swaps a topple for something bigger: a cartwheel tumble in the warm-up, or flying over the *front* of the treadmill. These were fun and kept, but if direction matters, state it ("falls backward off the rear end").
 - **Lock good clips.** `lock_clip: true` keeps an approved take when prompt text changes, which otherwise changes the cache key and re-bills. *(built in)*
@@ -65,6 +66,7 @@ This is a living document. **Read it before starting any episode**, and **append
 ## Editing
 - The finished edit has 0.4s crossfades, one shared color grade (`eq` + `colorbalance`), 1080×1920 at 24fps, a 0.4s fade-in, a 0.6s video and audio fade-out, and music fading out over the last 1.5s. *(built in)*
 - 5 × 5s clips with crossfades come to about 23.6s.
+- **Shot lengths can vary** (Kling takes any integer from 3 to 30s). Hiking Day used 3s + 5s + 7s + 5s + 5s to give the busiest gag more room at the same cost. `review clips` samples by percentage of each clip, so any length works. *(built in)*
 
 ## Bugs fixed (so they don't come back)
 - `fal.download()` skipped existing files, so a regenerated image with the same filename showed the **old** image. It now always overwrites. *(built in)*
@@ -79,6 +81,6 @@ This is a living document. **Read it before starting any episode**, and **append
 - [~] **Kling 4.0 Flash** (`kling/v4/flash/image-to-video`, $0.094/s = $0.47/5s). **Tested on Gym Day s3 (treadmill):** nearly the same motion as standard, a slightly weaker face-plant and ending, and a brief red band appeared around his waist mid-fall. **It does have native audio** (−21 dB mean; config fixed). The user hasn't decided yet; ask before switching. Side by side: the Gym Day `flash_vs_standard_treadmill.mp4` comparison (output, not kept).
 - [ ] **Kling 4.0 reference-to-video** (`kling/v4/reference-to-video`, `elements` + `image_urls`) for even stronger character lock. It takes the photos and `film_bear.png`.
 - [ ] A **canonical character sheet** (front, 3/4, side, back, plus expressions) in the locked style, via `python -m studio.cli sheet`. Use it as references instead of raw photos once approved.
-- [ ] An **end frame** (`end_image_url`) for shots with a big pose change, to stop drift mid-action.
+- [ ] An **end frame** (`end_image_url`) for shots with a big pose change, to stop drift mid-action. Top candidate: a physical gag like Hiking Day's stepping-stone topple.
 - [ ] Try `google/lyria-3.5` for music ($0.10 vs $0.25).
 - [ ] Generate keyframes at `resolution: 2K` if a final at 1080p looks soft.

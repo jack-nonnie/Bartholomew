@@ -4,6 +4,34 @@ One entry per episode, newest first. Record what was made, what it cost, what th
 
 ---
 
+## Ep 3: Hiking Day (2026-11-28)
+**Video:** `videos/bartholomew_hiking_day.mp4` (23.6s, 1080×1920, Kling native sound effects + acoustic hiking music)
+**Approved keyframes + final script:** `episodes/assets/hiking_day/`
+**Outfit:** a mustard-yellow bucket hat and a red backpack, which stayed on in every clip.
+
+**Shots**
+| # | Shot | Length | Keyframe pick | Notes |
+|---|---|---|---|---|
+| 1 | Trailhead: waves, marches off up the trail | 3s | v2 (B) | Shortened at the user's request to make room for s3. Fine. |
+| 2 | Stepping stones: stone tips, splash into stream | 5s | v2 (B) | **User: the toppling stone animation was poor.** No wobbly stone was set up in the keyframe, so a stone flipped up from nowhere and he leapt rather than being tipped. Hat flew off and landed back on (a nice accident). |
+| 3 | Pinecone bonk: catch, then a pinecone avalanche buries him | 7s | v2 (B) | The user asked for the gag to be expanded and lengthened. Came out great: buried, then pops up with a pinecone on his hat. |
+| 4 | Steep hill: slips and slides down, daisy on hat | 5s | v1 (A) | He slid rather than curling into a ball and rolling. Still reads. |
+| 5 | Summit: plants flag on a mountain peak, eats honey from the jar | 5s | new v1 | The user asked for a redo so it clearly looks like a mountaintop with drop-offs, and for straight honey instead of a sandwich. The pointed-rock peak worked. |
+
+**Spend:** about $5.25 logged (keyframes $1.08 over 12 images, clips $3.92, music $0.25), plus possibly about $0.79 for an s4 render lost when the background job hit its 30-minute limit. fal ran out of credit twice mid-batch; the user topped up.
+
+**Code changes:** `review clips` now samples by percentage of each clip (it silently failed on 3s clips), the double period in video prompts is fixed, and the template has new guidance on physical gags and variable shot lengths.
+
+**User verdict:** "It looks good." The stepping-stone topple animation was poor. Kling Flash: still to be decided after the script on the next episode (the user's instruction: standard Kling until they say otherwise, and they'll decide per episode after seeing the script).
+
+**Do differently next time**
+- Put the cause of every physical gag visibly in the keyframe, and write the motion as cause → effect physics with one event per shot.
+- Send the exact video prompts as their own short file at Gate 1, not buried in the long script.
+- Run renders with `timeout: 7200000`.
+- Check the fal balance covers the whole episode before starting (it ran out twice).
+
+---
+
 ## Ep 2: Gym Day (2026-11-25)
 **Video:** `videos/bartholomew_gym_day.mp4` (23.6s, 1080×1920, Kling native sound effects + workout-montage music)
 **Approved keyframes + final script:** `episodes/assets/gym_day/`

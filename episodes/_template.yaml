@@ -23,11 +23,13 @@ setting: >-
 # Each shot = ONE clear action. Kling handles one beat per 5s well; two beats gets messy.
 shots:
   - id: s1_EDIT                      # short snake_case id, prefixed s1_, s2_, ...
-    duration: 5
+    duration: 5                      # any whole number 3-30; give busy gags more, simple beats less
     beat: EDIT                       # 1-2 word label shown in the script
     # Keyframe = the FIRST frame of the shot (a still). Describe the exact pose with literal,
     # physical wording: where he stands/sits, what he holds, what he wears, his expression.
     # Say what is NOT happening yet if the motion will change it ("dry, NOT yet in the water").
+    # PHYSICAL GAGS: the thing that causes the gag (the wobbly stone, the loose branch) must be
+    # IN this frame, named and placed ("one round wobbly stone right in front of him, tilted").
     keyframe: >-
       {name} EDIT
     # Motion = what happens over 5 seconds, starting from the keyframe. One beat + a reaction.
@@ -36,6 +38,9 @@ shots:
     #   3) where he ends up (lying on his side along the bench / face-down on the mat / wrapped
     #   shoulders-to-knees in loops), 4) the final expression. Add timing ("within the first two
     #   seconds") for the key change. Vague lines ("tips over and falls asleep") get skipped by Kling.
+    # For a physical gag, spell out the cause -> effect like stage physics ("the stone rocks forward
+    # like a seesaw under his weight, he slides off its front edge, the stone stays put") and keep it
+    # to ONE physical event; cut lead-in actions so the gag has time to play.
     motion: >-
       {name} EDIT
     camera: EDIT                     # e.g. slow push-in, eye level / static close-up / gentle side tracking
