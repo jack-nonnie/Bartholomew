@@ -4,7 +4,7 @@ image_model: nano_banana_21          # LOCKED
 video_model: kling_v4                # LOCKED
 personality: playful
 
-approved: false                      # GATE 1
+approved: true                       # script approved 2026-11-28
 keyframes_approved: false            # GATE 2
 
 setting: >-
@@ -14,7 +14,7 @@ setting: >-
 
 shots:
   - id: s1_trailhead
-    duration: 5
+    duration: 3                       # user: shorter so the pinecone gag gets more time
     beat: Trailhead
     keyframe: >-
       {name} wearing a small mustard-yellow bucket hat and a little red
@@ -24,11 +24,11 @@ shots:
       determined grin, standing still and NOT yet walking
     motion: >-
       {name} takes one big excited breath, puffing his chest out even more, and
-      gives a firm little nod at the camera. Within the first two seconds he
+      gives a firm little nod at the camera. Within the first second he
       turns to face along the trail and starts marching away from the post with
       big exaggerated proud steps, knees lifting high and both arms swinging
       back and forth, the red backpack bouncing on his back with each step. After
-      a few steps he glances back over his shoulder at the camera with a big
+      three quick steps he glances back over his shoulder at the camera with a big
       cheeky grin and keeps marching up the path.
     camera: static medium-wide shot, eye level, the trail and the post in frame
     continuity: the mustard-yellow bucket hat stays on his head and the red backpack stays on his back the whole time, keeping their colors
@@ -54,7 +54,7 @@ shots:
     continuity: the mustard-yellow bucket hat and red backpack stay on him; the stream stays shallow and clear; there are exactly three stepping stones
     sfx: babbling stream, little hops on stone, a stone clunk, one big splash, water dripping
   - id: s3_pinecone_bonk
-    duration: 5
+    duration: 7                       # user: longer, gives the 3-part gag room
     beat: Pinecone bonk
     keyframe: >-
       {name} wearing the mustard-yellow bucket hat and red backpack, standing
@@ -63,15 +63,15 @@ shots:
       mouth, both paws empty at his sides; a few brown pinecones hang in the
       branches above him, NONE of them falling yet
     motion: >-
-      Within the first second, one brown pinecone drops from the branches and
+      Within the first two seconds, one brown pinecone drops from the branches and
       bonks {name} right on top of his bucket hat, squashing the hat down over
       his eyes; he wobbles, pushes the hat back up with one paw and blinks in
       surprise. A second pinecone falls and he lunges sideways and catches it in
       both paws, then holds it up toward the camera with a smug, triumphant grin.
-      Behind his back the whole branch shakes and, around the three-second mark,
+      Behind his back the whole branch shakes and, around the four-second mark,
       a big shower of dozens of pinecones pours down on him all at once,
       burying him in a tall heap of brown pinecones right up to his chin. For
-      the last second only his head pokes out of the pile, one pinecone sitting
+      the last two seconds only his head pokes out of the pile, one pinecone sitting
       on top of his bucket hat, and he gives the camera a flat, unimpressed
       look, then breaks into a sheepish grin.
     camera: static medium shot, slight low angle, the tree branches and the bear and the ground around him in frame
