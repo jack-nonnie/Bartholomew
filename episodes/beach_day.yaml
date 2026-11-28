@@ -114,26 +114,29 @@ shots:
   - id: s5_surfs_up
     duration: 5
     beat: Surf's up
+    # finale: one big trick (a spinning aerial off the wave lip); board stays under his feet
     keyframe: >-
       {name} wearing the red-and-white striped swim trunks, the straw sun hat
-      with the pink ribbon and the white sunblock stripe on his nose, already
-      standing up on a small pastel mint-green surfboard, riding a small gentle
-      curling wave close to the shore at golden sunset, knees bent, both arms
-      stretched out wide for balance, a wobbly, wide-eyed but excited grin, the
-      sea glowing orange and pink behind him, the sandy shore just ahead of
-      him; he has NOT fallen off and NOT yet reached the shore
+      with the pink ribbon and the white sunblock stripe on his nose, crouched
+      low on a small pastel mint-green surfboard, carving fast up the glossy
+      face of a big curling turquoise wave at golden sunset, the foamy lip of
+      the wave curling just above and ahead of him, one paw trailing in the
+      water and the other stretched forward, a fierce, focused, determined
+      grin, spray streaming off the tail of the board, the sky glowing orange
+      and pink; he is still on the wave and has NOT yet jumped
     motion: >-
-      {name} wobbles on the surfboard, arms windmilling, then finds his
-      balance and stands taller, riding the little wave toward the shore with
-      a proud, delighted grin and one paw raised high in a "woo" gesture. The
-      wave carries the board gently up onto the shallow wet sand, where it
-      slides to a stop. Around the three-second mark he hops off the board onto
-      the sand, plants his fists on his hips, puffs out his chest and strikes a
-      proud hero pose beside the surfboard, the sunset glowing behind him, with
-      a big beaming smile at the camera.
-    camera: static wide shot, eye level, the bear, the surfboard, the wave and the shore all in frame
-    continuity: the red-and-white striped swim trunks, the straw sun hat with the pink ribbon and the white sunblock stripe on his nose all stay on; there is exactly one surfboard and it stays pastel mint green
-    sfx: rolling waves, a whooshing surf glide, a sandy swish as the board stops, a soft hop onto sand, distant seagulls
+      {name} shoots up the face of the wave toward the curling lip, crouching
+      lower to gather speed. Around the one-and-a-half-second mark he launches
+      off the top of the wave into the air, the surfboard stuck to his feet,
+      and spins one full 360-degree turn high above the wave against the glowing
+      sunset sky, a glittering fan of spray and sparkles trailing behind the
+      board. He lands back on the wave face with a big splash, bends his knees,
+      steadies himself, and for the last two seconds glides down the wave in a
+      cool relaxed stance, one paw raised in a "hang loose" wave at the camera
+      with a huge proud grin.
+    camera: static wide shot, eye level, the whole wave, the bear and the sky above the wave all in frame with room for the jump
+    continuity: the red-and-white striped swim trunks, the straw sun hat with the pink ribbon and the white sunblock stripe on his nose all stay on, even during the spin; there is exactly one surfboard, it stays pastel mint green and stays under his feet the whole time
+    sfx: a rushing roar of the wave, a whoosh as he launches, a sparkly swish during the spin, a big splash landing, waves, distant seagulls
 
 music:
   duration: 23
