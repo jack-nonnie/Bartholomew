@@ -5,7 +5,7 @@ video_model: kling_v4                # LOCKED (user chose standard over Flash fo
 personality: playful
 
 approved: true                       # script approved 2026-11-28
-keyframes_approved: false            # GATE 2: set true ONLY after the user picks keyframes
+keyframes_approved: true             # picks A,A,A,A,A approved 2026-11-28
 
 # OUTFIT (same in every shot, user request): red-and-white striped swim trunks,
 # small round straw sun hat with a pink ribbon, white stripe of sunblock across his nose.
@@ -17,6 +17,7 @@ setting: >-
 
 shots:
   - id: s1_hot_sand
+    keyframe_pick: 1
     duration: 3
     beat: Hot sand
     keyframe: >-
@@ -38,6 +39,7 @@ shots:
     continuity: the red-and-white striped swim trunks stay on, the straw sun hat with the pink ribbon stays on his head, the white sunblock stripe stays on his nose, and the striped towel stays rolled under his arm, all keeping their colors
     sfx: seagulls, gentle waves, quick soft sandy footsteps, a little surprised "hoo-hoo"
   - id: s2_sandcastle
+    keyframe_pick: 1
     duration: 5
     beat: Sandcastle
     # physical gag: the cause (the incoming wave) is visible in the keyframe
@@ -64,6 +66,7 @@ shots:
     continuity: the red-and-white striped swim trunks, the straw sun hat with the pink ribbon and the white sunblock stripe on his nose all stay on; the bucket stays red; there is only one sandcastle and it only melts down, it never moves or floats away
     sfx: waves, a big rushing whoosh of a wave, fizzing foam, a soft sandy slump, water dripping, seagulls
   - id: s3_crab_pinch
+    keyframe_pick: 1
     duration: 5
     beat: Crab pinch
     keyframe: >-
@@ -86,6 +89,7 @@ shots:
     continuity: the red-and-white striped swim trunks, the straw sun hat with the pink ribbon and the white sunblock stripe on his nose all stay on; there is exactly one small red crab, it stays crab sized; the towel stays blue-and-white striped
     sfx: gentle waves, tiny clicking crab claws, a squeaky "eep!", soft thumping hops on sand, seagulls
   - id: s4_seagull_thief
+    keyframe_pick: 1
     duration: 5
     beat: Seagull thief
     # physical gag: the seagull (the cause) is already standing right behind him in the keyframe
@@ -112,6 +116,7 @@ shots:
     continuity: the red-and-white striped swim trunks, the straw sun hat with the pink ribbon and the white sunblock stripe on his nose all stay on; there is exactly one seagull, white with a yellow beak, ordinary seagull sized; there is exactly one sandwich
     sfx: seagull squawks, flapping wings, a stretchy tugging creak of bread, a soft sandy flump, waves
   - id: s5_surfs_up
+    keyframe_pick: 1
     duration: 5
     beat: Surf's up
     # finale: one big trick (a spinning aerial off the wave lip); board stays under his feet
